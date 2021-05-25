@@ -49,7 +49,7 @@ body {
 				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
 			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px" href="#">Login</a></li>
+				style="border-radius: 25px" href="loginUsuario.jsp">Login</a></li>
 			<li></li>
 		</ul>
 	</nav>

@@ -13,6 +13,7 @@
 	<div id="login-box">
 		<div class="center" align="center">
 			<a> <img alt="" src="resources/img/user_icon.png" width="50"> </a>
+			
 			<form action="CadastroUsuarioServlet" method="post" id="formUser">
 				<table>
 					<tr>

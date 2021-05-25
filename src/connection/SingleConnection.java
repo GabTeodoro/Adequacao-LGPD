@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 
 public class SingleConnection {
 
-	private static String url = "";
-	private static String user = "";
-	private static String password = "";
+	private static String url = "jdbc:mysql://localhost:3306/site_lgpd?autoReconnect=true";
+	private static String user = "root";
+	private static String password = "root";
 	private static Connection connection = null;
 
 	static {
@@ -21,7 +21,7 @@ public class SingleConnection {
 	private static void conectar() {
 		try {
 			if (connection == null) {
-				Class.forName("");
+				Class.forName("com.mysql.jc.jdbc.Driver");
 				connection = DriverManager.getConnection(url, user, password);
 				connection.setAutoCommit(false);
 				System.out.println("Conectado com sucesso ao database!");
