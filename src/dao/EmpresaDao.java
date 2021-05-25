@@ -21,14 +21,12 @@ public class EmpresaDao {
 
 		try {
 
-			String sql = "INSERT INTO empresa (nome, cnpj, email_usuario, estado, nota) VALUES (?,?,?,?,?)";
+			String sql = "INSERT INTO empresa (nome, cnpj, email_usuario) VALUES (?,?,?)";
 			PreparedStatement inserir = connection.prepareStatement(sql);
 
 			inserir.setString(1, empresa.getNome());
 			inserir.setString(2, empresa.getCnpj());
 			inserir.setString(3, empresa.getEmailUsuario());
-			inserir.setString(4, empresa.getEstado());
-			inserir.setDouble(5, empresa.getNota());
 			inserir.execute();
 			connection.commit();
 
