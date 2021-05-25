@@ -11,13 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import dao.UsuarioDao;
+import model.Usuario;
 
 
 @WebServlet("/LoginUsuarioServlet")
 public class LoginUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private UsuarioDao usuariodao = new UsuarioDao();
+	private UsuarioDao usuarioDao = new UsuarioDao();
        
    
     public LoginUsuarioServlet() {
@@ -38,13 +39,18 @@ public class LoginUsuarioServlet extends HttpServlet {
 		
 		try {
 			
-			if(usuariodao.validarUsuario(email, senha)) {
+			if(usuarioDao.validarUsuario(email, senha)) {
 				
-				RequestDispatcher dispatcher = request.getRequestDispatcher("portal.jsp");
+				Usuario usuario = usuarioDao.buscarUsuario(email);
+				String [] nomeCompleto = usuario.getNome().split(" ");
+				String primeiroNome = nomeCompleto[0];
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+				request.setAttribute("primeiroNome", primeiroNome);
 				dispatcher.forward(request, response);
 				
 			}else {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("loginUsuario.jsp");
 				dispatcher.forward(request, response);
 				
 			}

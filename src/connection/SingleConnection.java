@@ -21,7 +21,7 @@ public class SingleConnection {
 	private static void conectar() {
 		try {
 			if (connection == null) {
-				Class.forName("com.mysql.jc.jdbc.Driver");
+				Class.forName("com.mysql.jdbc.Driver");
 				connection = DriverManager.getConnection(url, user, password);
 				connection.setAutoCommit(false);
 				System.out.println("Conectado com sucesso ao database!");

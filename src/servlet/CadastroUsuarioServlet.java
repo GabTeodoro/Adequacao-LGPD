@@ -31,7 +31,7 @@ public class CadastroUsuarioServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
 		String nome = request.getParameter("nome");
 		String cpf = request.getParameter("cpf");
 		String email = request.getParameter("email");
@@ -49,8 +49,12 @@ public class CadastroUsuarioServlet extends HttpServlet {
 		usuario.setCargo(cargo);
 
 		usuariodao.cadastrarUsuario(usuario);
+		
+		String [] nomeCompleto = nome.split(" ");
+		String primeiroNome = nomeCompleto[0];
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("cadastro.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+		request.setAttribute("primeiroNome", primeiroNome);
 		dispatcher.forward(request, response);
 	}
 

@@ -64,7 +64,7 @@ body {
 	<div class="container" style="margin-top: 80px">
 		<img alt="Logo" src="resources/img/logo.png" align="right" width="600">
 		<br> <br> <br> <br>
-		<h1 align="center">BEM-VINDO(A)</h1>
+		<h1 align="center">Olá ${primeiroNome},</h1>
 		<h1 align="center">A MELHOR FERRAMENTA DE LGPD!</h1>
 	</div>
 </body>
