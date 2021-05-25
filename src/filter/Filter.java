@@ -20,25 +20,25 @@ public class Filter implements javax.servlet.Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 
-		try {
-
-			chain.doFilter(request, response);
-			connection.commit();
-		} catch (Exception e) {
-			try {
-
-				e.printStackTrace();
-				connection.rollback();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-		}
+//		try {
+//
+//			chain.doFilter(request, response);
+//			connection.commit();
+//		} catch (Exception e) {
+//			try {
+//
+//				e.printStackTrace();
+//				connection.rollback();
+//			} catch (Exception e2) {
+//				e2.printStackTrace();
+//			}
+//		}
 
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {
 
-		connection = SingleConnection.getConnection();
+//		connection = SingleConnection.getConnection();
 
 	}
 
