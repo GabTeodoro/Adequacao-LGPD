@@ -32,8 +32,7 @@ li {
 nav.navbar {
 	font-size: 14px;
 }
-</style>
-<style>
+
 /*Estilo da Barra de Pesquisa */
 body {
 	font-family: Arial;
@@ -49,7 +48,7 @@ body {
 	<nav class="navbar navbar-expand-sm navbar-transparent">
 		<!-- Logo Com foto -->
 		<div class="container">
-			<a class="navbar-brand" href="Home.jsp">Logo </a>
+			<a class="navbar-brand" href="index.jsp">Logo </a>
 		</div>
 		<!-- Links No Menu de Acesso a outras Páginas -->
 		<ul class="navbar-nav">
@@ -57,7 +56,7 @@ body {
 				style="border-radius: 25px" href="#">Ferramenta</a></li>
 			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active "
-				style="border-radius: 25px" href="#">Cadastro</a></li>
+				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
 			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active"
 				style="border-radius: 25px" href="#">Login</a></li>
