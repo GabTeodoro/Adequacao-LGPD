@@ -170,7 +170,10 @@ body {
 									href="CadastroEmpresaServlet?acao=editEmpresa&user=${user.email}&empresa=${empresa.id}"><img
 										alt="Editar" title="Editar Empresa" src="resources/img/edit_icon.png" width="20px"
 										height="20px"></a></td>
-								<td>Excluir</td>
+								<td><a
+									href="CadastroEmpresaServlet?acao=removeEmpresa&user=${user.email}&empresa=${empresa.id}"><img
+										alt="Excluir" title="Excluir Empresa" src="resources/img/exclude_icon.png" width="20px"
+										height="20px"></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

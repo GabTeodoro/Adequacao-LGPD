@@ -55,6 +55,16 @@ public class CadastroEmpresaServlet extends HttpServlet {
 			request.setAttribute("empresa", empresa);
 			dispatcher.forward(request, response);
 			
+		} else if(acao.equalsIgnoreCase("removeEmpresa")) {
+			
+			String id = request.getParameter("empresa");
+			empresaDao.deletarEmpresa(id);
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+			request.setAttribute("empresas", empresaDao.listarEmpresa(usuario.getEmail()));
+			request.setAttribute("user", usuario);
+			dispatcher.forward(request, response);
+			
 		}
 		
 		
