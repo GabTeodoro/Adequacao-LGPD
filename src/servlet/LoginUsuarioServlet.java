@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import dao.EmpresaDao;
 import dao.UsuarioDao;
 import model.Usuario;
 
@@ -19,6 +19,7 @@ public class LoginUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private UsuarioDao usuarioDao = new UsuarioDao();
+	private EmpresaDao empresaDao = new EmpresaDao();
        
    
     public LoginUsuarioServlet() {
@@ -45,8 +46,11 @@ public class LoginUsuarioServlet extends HttpServlet {
 				String [] nomeCompleto = usuario.getNome().split(" ");
 				String primeiroNome = nomeCompleto[0];
 				
+			
 				RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+				request.setAttribute("user", usuario);
 				request.setAttribute("primeiroNome", primeiroNome);
+				request.setAttribute("empresas", empresaDao.listarEmpresa(usuario.getEmail()));
 				dispatcher.forward(request, response);
 				
 			}else {

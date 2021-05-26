@@ -54,6 +54,7 @@ public class CadastroUsuarioServlet extends HttpServlet {
 		String primeiroNome = nomeCompleto[0];
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+		request.setAttribute("user", usuario);
 		request.setAttribute("primeiroNome", primeiroNome);
 		dispatcher.forward(request, response);
 	}

@@ -13,7 +13,7 @@
 <body>
 	<c:import url="menuHome.jsp" />
 	
-	<div id="login-box" style="height: 350px">
+	<div id="login-box" style="height: 400px">
 		<div class="center" align="center">
 		<br>
 			<a> <img alt="" src="resources/img/company_icon.png" width="50"> </a>
@@ -23,17 +23,21 @@
 					<tr>
 						<td><label>Id: </label></td>
 						<td><input readonly="readonly" type="text" id="id" name="id"
-							placeholder="Id" value="${user.id}"></td>
+							placeholder="Id do usuário" value="${usuarioEmpresa.id}"></td>
+					</tr>
+					<tr>
+						<td><label>E-mail: </label></td>
+						<td><input readonly="readonly" type="text" id="email" name="email"
+							placeholder="E-mail do usuário" value="${usuarioEmpresa.email}"></td>
 					</tr>
 					<tr>
 						<td><label>Nome: </label></td>
 						<td><input type="text" id="nome" name="nome"
-							placeholder="Nome da Empresa" value="${user.nome}"></td>
+							placeholder="Nome da Empresa""></td>
 					</tr>
 					<tr>
 						<td><label>CNPJ: </label></td>
-						<td><input type="text" id="cnpj" name="cnpj" placeholder="CNPJ da Empresa"
-							value="${user.cnpj}"></td>
+						<td><input type="text" id="cnpj" name="cnpj" placeholder="CNPJ da Empresa"></td>
 					</tr>
 					<tr>
 						<td></td>
