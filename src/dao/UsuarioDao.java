@@ -56,6 +56,31 @@ public class UsuarioDao {
 		return false;
 	}
 
+	public boolean validarUsuarioEdit(String email, String id) {
+
+		try {
+
+			String sql = "SELECT COUNT(1) AS qtd FROM usuario WHERE email = '" + email + "' AND id <> '" + id + "'";
+			PreparedStatement validar = connection.prepareStatement(sql);
+			ResultSet resultSet = validar.executeQuery();
+
+			if (resultSet.next()) {
+
+				return resultSet.getInt("qtd") <= 0;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			try {
+				connection.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}
+
+		return false;
+	}
+
 	public void cadastrarUsuario(Usuario usuario) {
 
 		try {
@@ -120,14 +145,14 @@ public class UsuarioDao {
 	}
 
 	public void deletarUsuario(String email) {
-		
+
 		try {
-			
+
 			String sql = "DELETE FROM usuario WHERE email = '" + email + "'";
 			PreparedStatement deletar = connection.prepareStatement(sql);
 			deletar.execute();
 			connection.commit();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			try {
@@ -137,15 +162,15 @@ public class UsuarioDao {
 			}
 		}
 	}
-	
+
 	public Usuario editarUsuario(Usuario usuario) {
-		
+
 		try {
-			
-			String sql = "UPDATE usuario SET nome = ?, cpf = ?, email = ?, senha = ?, rg = ?, area = ?, cargo = ? WHERE id = '" 
-			+ usuario.getId() + "'";
+
+			String sql = "UPDATE usuario SET nome = ?, cpf = ?, email = ?, senha = ?, rg = ?, area = ?, cargo = ? WHERE id = '"
+					+ usuario.getId() + "'";
 			PreparedStatement atualizar = connection.prepareStatement(sql);
-			
+
 			atualizar.setString(1, usuario.getNome());
 			atualizar.setString(2, usuario.getCpf());
 			atualizar.setString(3, usuario.getEmail());
@@ -153,10 +178,10 @@ public class UsuarioDao {
 			atualizar.setString(5, usuario.getRg());
 			atualizar.setString(6, usuario.getArea());
 			atualizar.setString(7, usuario.getCargo());
-			
+
 			atualizar.executeUpdate();
 			connection.commit();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			try {
@@ -165,7 +190,7 @@ public class UsuarioDao {
 				e1.printStackTrace();
 			}
 		}
-		
+
 		return usuario;
 	}
 }

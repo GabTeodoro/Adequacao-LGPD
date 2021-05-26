@@ -14,7 +14,7 @@
 		<div class="center" align="center">
 			<a> <img alt="" src="resources/img/user_icon.png" width="50"> </a>
 			
-			<form action="CadastroUsuarioServlet" method="post" id="formUser">
+			<form action="CadastroUsuarioServlet" method="post">
 				<table>
 					<tr>
 						<td><label>Id: </label></td>
@@ -58,7 +58,7 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td><input type="submit" value="Cadastrar"
+						<td><input type="submit" value="Confirmar"
 							style="width: 100%"></td>
 					</tr>
 				</table>

@@ -97,7 +97,7 @@ body {
 		<div class="row" style="margin-left: 90px">
 			<div class="col-sm-6">
 				<br>
-				<form action="CadastroUsuarioServlet" method="post" id="formUser">
+				<form action="CadastroUsuarioServlet" method="get">
 					<table>
 						<tr>
 							<td><label>Id: </label></td>
@@ -166,7 +166,7 @@ body {
 								<td><c:out value="${empresa.cnpj}"></c:out></td>
 								<td><c:out value="${empresa.estado}"></c:out></td>
 								<td><c:out value="${empresa.nota}"></c:out></td>
-								<td>Editar</td>
+								<td><a href="CadastroEmpresaServlet?acao=edit&empresa=${cnpj}"></a></td>
 								<td>Excluir</td>
 							</tr>
 						</c:forEach>
