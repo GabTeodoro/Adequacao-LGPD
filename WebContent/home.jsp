@@ -72,7 +72,7 @@ body {
 		<!-- Links No Menu de Acesso a outras Páginas -->
 		<ul class="navbar-nav">
 			<li class="nav-item"><a class="btn btn-outline-light active  "
-				style="border-radius: 25px" href="#">Ferramenta</a></li>
+				style="border-radius: 25px" href="#">Teste</a></li>
 			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active "
 				style="border-radius: 25px" href="#">Conta</a></li>
@@ -166,13 +166,16 @@ body {
 								<td><c:out value="${empresa.cnpj}"></c:out></td>
 								<td><c:out value="${empresa.estado}"></c:out></td>
 								<td><c:out value="${empresa.nota}"></c:out></td>
-								<td><a href="CadastroEmpresaServlet?acao=edit&empresa=${cnpj}"></a></td>
+								<td><a
+									href="CadastroEmpresaServlet?acao=editEmpresa&user=${user.email}&empresa=${empresa.id}"><img
+										alt="Editar" title="Editar Empresa" src="resources/img/edit_icon.png" width="20px"
+										height="20px"></a></td>
 								<td>Excluir</td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
-				
+
 				<ul>
 					<li class="nav-item"><a class="btn btn-outline-dark activated"
 						style="border-radius: 25px"

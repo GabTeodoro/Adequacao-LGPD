@@ -23,7 +23,7 @@
 					<tr>
 						<td><label>Id: </label></td>
 						<td><input readonly="readonly" type="text" id="id" name="id"
-							placeholder="Id do usuário" value="${usuarioEmpresa.id}"></td>
+							placeholder="Id da Empresa" value="${empresa.id}"></td>
 					</tr>
 					<tr>
 						<td><label>E-mail: </label></td>
@@ -33,15 +33,15 @@
 					<tr>
 						<td><label>Nome: </label></td>
 						<td><input type="text" id="nome" name="nome"
-							placeholder="Nome da Empresa""></td>
+							placeholder="Nome da Empresa" value="${empresa.nome}"></td>
 					</tr>
 					<tr>
 						<td><label>CNPJ: </label></td>
-						<td><input type="text" id="cnpj" name="cnpj" placeholder="CNPJ da Empresa"></td>
+						<td><input type="text" id="cnpj" name="cnpj" placeholder="CNPJ da Empresa" value="${empresa.cnpj}"></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td><input type="submit" value="Cadastrar"
+						<td><input type="submit" value="Confirmar"
 							style="width: 100%"></td>
 					</tr>
 				</table>
