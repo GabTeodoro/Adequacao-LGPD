@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.EmpresaDao;
 import dao.UsuarioDao;
@@ -51,6 +52,8 @@ public class LoginUsuarioServlet extends HttpServlet {
 				request.setAttribute("user", usuario);
 				request.setAttribute("primeiroNome", primeiroNome);
 				request.setAttribute("empresas", empresaDao.listarEmpresa(usuario.getEmail()));
+				HttpSession session = request.getSession();
+				session.setAttribute("logado", usuario);
 				dispatcher.forward(request, response);
 				
 			}else {

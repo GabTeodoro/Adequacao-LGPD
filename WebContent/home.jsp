@@ -64,22 +64,7 @@ body {
 </style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm navbar-transparent">
-		<!-- Logo Com foto -->
-		<div class="container">
-			<a class="navbar-brand" href="home.jsp">Logo </a>
-		</div>
-		<!-- Links No Menu de Acesso a outras Páginas -->
-		<ul class="navbar-nav">
-			<li class="nav-item"><a class="btn btn-outline-light active  "
-				style="border-radius: 25px" href="dicasTeste.jsp">Teste</a></li>
-			<li></li>
-			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px"
-				href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Empresa</a></li>
-			<li></li>
-		</ul>
-	</nav>
+	<c:import url="menuHome.jsp" />
 
 	<div class="container" style="margin-top: 80px">
 		<img alt="Logo" src="resources/img/logo.png" align="right" width="600">

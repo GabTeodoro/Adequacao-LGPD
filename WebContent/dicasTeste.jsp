@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="resources/css/cadastroStyle.css">
 </head>
 <body>
-	<c:import url="menu.jsp" />
+	<c:import url="menuHome.jsp" />
 	<div id="login-box">
 		<div class="center" align="center">
 			<h1>Teste</h1>

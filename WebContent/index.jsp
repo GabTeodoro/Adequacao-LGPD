@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -58,12 +59,11 @@ body {
 </style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm navbar-transparent">
-		<!-- Logo Com foto -->
+<c:import url="menuHome.jsp" />
+	<!-- <nav class="navbar navbar-expand-sm navbar-transparent">
 		<div class="container">
 			<a class="navbar-brand" href="index.jsp">Logo </a>
 		</div>
-		<!-- Links No Menu de Acesso a outras Páginas -->
 		<ul class="navbar-nav">
 			<li class="nav-item"><a class="btn btn-outline-light active "
 				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
@@ -72,7 +72,7 @@ body {
 				style="border-radius: 25px" href="loginUsuario.jsp">Login</a></li>
 			<li></li>
 		</ul>
-	</nav>
+	</nav> -->
 
 	<div class="container" style="margin-top: 80px">
 		<img alt="Logo" src="resources/img/logo.png" align="right" width="600">
