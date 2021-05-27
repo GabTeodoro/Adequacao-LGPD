@@ -26,12 +26,12 @@ h3 {
 	margin-bottom: 20px;
 }
 
- h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    margin-bottom: 30px;
-  }  
+h4 {
+	font-size: 19px;
+	line-height: 1.375em;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
 
 a {
 	color: white;
@@ -65,9 +65,6 @@ body {
 		</div>
 		<!-- Links No Menu de Acesso a outras Páginas -->
 		<ul class="navbar-nav">
-			<li class="nav-item"><a class="btn btn-outline-light active  "
-				style="border-radius: 25px" href="#">Ferramenta</a></li>
-			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active "
 				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
 			<li></li>
@@ -95,30 +92,30 @@ body {
 		style="margin-top: 200px; background-color: white;">
 		<br>
 		<h3>O que é a LGPD?</h3>
-		<h4>It is a long established fact that a reader will be
-			distracted by the readable content of a page when looking at its
-			layout. The point of using Lorem Ipsum is that it has a more-or-less
-			normal distribution of letters, as opposed to using 'Content here,
-			content here', making it look like readable English. Many desktop
-			publishing packages and web page editors now use Lorem Ipsum as their
-			default model text, and a search for 'lorem ipsum' will uncover many
-			web sites still in their infancy. Various versions have evolved over
-			the years, sometimes by accident, sometimes on purpose (injected
-			humour and the like).</h4>
+		<h4>Sed ut perspiciatis unde omnis iste natus error sit
+			voluptatem accusantium doloremque laudantium, totam rem aperiam,
+			eaque ipsa quae ab illo inventore veritatis et quasi architecto
+			beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+			voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+			magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+			quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+			adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+			labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+			veniam, quis nostrum.</h4>
 
 
 		<div style="margin-top: 50px; background-color: white;">
 			<h3>Sobre o nosso teste!</h3>
-			<h4>It is a long established fact that a reader will be
-				distracted by the readable content of a page when looking at its
-				layout. The point of using Lorem Ipsum is that it has a more-or-less
-				normal distribution of letters, as opposed to using 'Content here,
-				content here', making it look like readable English. Many desktop
-				publishing packages and web page editors now use Lorem Ipsum as
-				their default model text, and a search for 'lorem ipsum' will
-				uncover many web sites still in their infancy. Various versions have
-				evolved over the years, sometimes by accident, sometimes on purpose
-				(injected humour and the like).</h4>
+			<h4>At vero eos et accusamus et iusto odio dignissimos ducimus
+				qui blanditiis praesentium voluptatum deleniti atque corrupti quos
+				dolores et quas molestias excepturi sint occaecati cupiditate non
+				provident, similique sunt in culpa qui officia deserunt mollitia
+				animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
+				est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+				eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+				facere possimus, omnis voluptas assumenda est, omnis dolor
+				repellendus. Temporibus autem quibusdam et aut officiis debitis aut
+				rerum necessitatibus saep.</h4>
 		</div>
 	</div>
 </body>

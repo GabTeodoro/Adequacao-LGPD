@@ -42,9 +42,6 @@ body {
 		</div>
 		<!-- Links No Menu de Acesso a outras Páginas -->
 		<ul class="navbar-nav">
-			<li class="nav-item"><a class="btn btn-outline-light active  "
-				style="border-radius: 25px" href="#">Ferramenta</a></li>
-			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active "
 				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
 			<li></li>
