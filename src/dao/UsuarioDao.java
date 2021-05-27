@@ -16,6 +16,7 @@ public class UsuarioDao {
 		connection = SingleConnection.getConnection();
 	}
 
+	// Método usado no Login.
 	public boolean validarUsuario(String email, String senha) throws SQLException {
 
 		String sql = "SELECT * FROM usuario WHERE email = '" + email + "' AND senha = '" + senha + "'";
