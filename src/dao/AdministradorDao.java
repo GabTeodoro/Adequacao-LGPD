@@ -35,7 +35,7 @@ public class AdministradorDao {
 
 		try {
 
-			String sql = "INSERT INTO administrador (nome, cpf, email, senha)";
+			String sql = "INSERT INTO administrador (nome, cpf, email, senha) VALUES (?,?,?,?)";
 			PreparedStatement inserir = connection.prepareStatement(sql);
 
 			inserir.setString(1, administrador.getNome());

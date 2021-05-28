@@ -59,6 +59,9 @@ body {
 			<a class="navbar-brand" href="index.jsp">Logo </a>
 		</div>
 		<ul class="navbar-nav">
+		<li class="nav-item"><a class="btn btn-outline-light active "
+				style="border-radius: 25px" href="cadastroAdministrador.jsp">Administrador</a></li>
+			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active "
 				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
 			<li></li>
