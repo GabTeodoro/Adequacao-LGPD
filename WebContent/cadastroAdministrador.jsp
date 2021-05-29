@@ -18,9 +18,9 @@
 			<form action="CadastroAdministradorServlet" method="post">
 				<table>
 					<tr>
-						<td><label>Id: </label></td>
-						<td><input readonly="readonly" type="text" id="id" name="id"
-							placeholder="Id" value="${user.id}"></td>
+						<td><label>E-mail ADM: </label></td>
+						<td><input readonly="readonly" type="text" id="emailAdm" name="emailAdm"
+							placeholder="E-mailAdm" value="${administradorSessao.email}"></td>
 					</tr>
 					<tr>
 						<td><label>Nome: </label></td>

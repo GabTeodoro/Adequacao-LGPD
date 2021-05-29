@@ -70,7 +70,7 @@ public class LoginUsuarioServlet extends HttpServlet {
 				request.setAttribute("user", administrador);
 				request.setAttribute("primeiroNome", primeiroNome);
 				HttpSession session = request.getSession();
-				session.setAttribute("logado", administrador);
+				session.setAttribute("logadoAdm", administrador);
 				dispatcher.forward(request, response);
 				
 				

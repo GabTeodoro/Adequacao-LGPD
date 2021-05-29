@@ -64,7 +64,7 @@ body {
 </style>
 </head>
 <body>
-	<c:import url="menuHome.jsp" />
+	<c:import url="menuAdm.jsp" />
 
 	<div class="container" style="margin-top: 80px">
 		<img alt="Logo" src="resources/img/logo.png" align="right" width="600">
@@ -112,46 +112,6 @@ body {
 						</tr>
 					</table>
 				</form>
-			</div>
-			<div class="col-sm-6">
-				<h3>Minhas Empresas</h3>
-				<table>
-					<thead>
-						<tr>
-							<th>Nome</th>
-							<th>CNPJ</th>
-							<th>Estado</th>
-							<th>Nota</th>
-							<th>Editar</th>
-							<th>Excluir</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${empresas}" var="empresa">
-							<tr>
-								<td><c:out value="${empresa.nome}"></c:out></td>
-								<td><c:out value="${empresa.cnpj}"></c:out></td>
-								<td><c:out value="${empresa.estado}"></c:out></td>
-								<td><c:out value="${empresa.nota}"></c:out></td>
-								<td><a
-									href="CadastroEmpresaServlet?acao=editEmpresa&user=${user.email}&empresa=${empresa.id}"><img
-										alt="Editar" title="Editar Empresa" src="resources/img/edit_icon.png" width="20px"
-										height="20px"></a></td>
-								<td><a
-									href="CadastroEmpresaServlet?acao=removeEmpresa&user=${user.email}&empresa=${empresa.id}"><img
-										alt="Excluir" title="Excluir Empresa" src="resources/img/exclude_icon.png" width="20px"
-										height="20px"></a></td>
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-
-				<ul>
-					<li><a class="btn btn-outline-dark activated"
-						style="border-radius: 25px"
-						href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Cadastrar
-							Nova Empresa</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
