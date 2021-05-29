@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.AdministradorDao;
 import dao.EmpresaDao;
 import dao.UsuarioDao;
+import model.Administrador;
 import model.Usuario;
 
 
@@ -21,6 +23,7 @@ public class LoginUsuarioServlet extends HttpServlet {
 	
 	private UsuarioDao usuarioDao = new UsuarioDao();
 	private EmpresaDao empresaDao = new EmpresaDao();
+	private AdministradorDao administradorDao = new AdministradorDao();
        
    
     public LoginUsuarioServlet() {
@@ -55,6 +58,21 @@ public class LoginUsuarioServlet extends HttpServlet {
 				HttpSession session = request.getSession();
 				session.setAttribute("logado", usuario);
 				dispatcher.forward(request, response);
+				
+			}else if (administradorDao.validarAdministrador(email, senha)){
+				
+				Administrador administrador = administradorDao.buscarAdministrador(email);
+				String [] nomeCompleto = administrador.getNome().split(" ");
+				String primeiroNome = nomeCompleto[0];
+				
+
+				RequestDispatcher dispatcher = request.getRequestDispatcher("homeAdm.jsp");
+				request.setAttribute("user", administrador);
+				request.setAttribute("primeiroNome", primeiroNome);
+				HttpSession session = request.getSession();
+				session.setAttribute("logado", administrador);
+				dispatcher.forward(request, response);
+				
 				
 			}else {
 				RequestDispatcher dispatcher = request.getRequestDispatcher("loginUsuario.jsp");
