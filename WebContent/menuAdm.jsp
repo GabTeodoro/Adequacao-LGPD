@@ -35,38 +35,20 @@ body {
 </style>
 <body>
 	<nav class="navbar navbar-expand-sm navbar-transparent">
-	<c:if test="${not empty logado}">
-		<!-- Logo Com foto -->
 		<div class="container">
-			<a class="navbar-brand" href="CadastroUsuarioServlet?acao=listar&user=${logado.email}">Logo </a>
-		</div>
-		<!-- Links No Menu de Acesso a outras Páginas -->
-		
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="btn btn-outline-light active  "
-					style="border-radius: 25px" href="dicasTeste.jsp">Teste</a></li>
-				<li></li>
-
-				<li class="nav-item"><a class="btn btn-outline-light active"
-					style="border-radius: 25px"
-					href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Empresa</a></li>
-				<li></li>
-			</ul>
-		</c:if>
-		
-		<c:if test="${empty logado}">
-		<div class="container">
-			<a class="navbar-brand" href="index.jsp">Logo </a>
+			<a class="navbar-brand" href="homeAdm.jsp">Logo </a>
 		</div>
 		<ul class="navbar-nav">
 			<li class="nav-item"><a class="btn btn-outline-light active "
-				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
+				style="border-radius: 25px" href="CadastroAdministradorServlet?acao=addAdm&user=${user.email}">Cadastro</a></li>
 			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px" href="loginUsuario.jsp">Login</a></li>
+				style="border-radius: 25px" href="CadastroAdministradorServlet?acao=listAdm&user=${user.email}">Admins</a></li>
+			<li></li>
+			<li class="nav-item"><a class="btn btn-outline-light active"
+				style="border-radius: 25px" href="#">Questões</a></li>
 			<li></li>
 		</ul>
-		</c:if>
 	</nav>
 
 </body>

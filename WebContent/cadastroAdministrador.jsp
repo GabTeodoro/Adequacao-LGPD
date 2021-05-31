@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="resources/css/cadastroStyle.css">
 </head>
 <body>
-	<c:import url="menuHome.jsp" />
-	<div id="login-box" style="height: 450px">
+	<c:import url="menuAdm.jsp" />
+	<div id="login-box" style="height: 480px">
 		<div class="center" align="center">
 			<h2 style="color: black; padding-top: 15px; margin-bottom: 0px;">Cadastro Administrador</h2>
 		<br>
@@ -18,6 +18,11 @@
 			
 			<form action="CadastroAdministradorServlet" method="post">
 				<table>
+					<tr>
+						<td><label>E-mail ADM: </label></td>
+						<td><input readonly="readonly" type="text" id="emailAdm" name="emailAdm"
+							placeholder="E-mailAdm" value="${administradorSessao.email}"></td>
+					</tr>
 					<tr>
 						<td><label>Id: </label></td>
 						<td><input readonly="readonly" type="text" id="id" name="id"
