@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import connection.SingleConnection;
 import model.Administrador;
@@ -87,6 +89,41 @@ public class AdministradorDao {
 		}
 
 		return null;
+	}
+	
+	public List<Administrador> listarAdministradores(){
+		
+		List<Administrador> administradores = new ArrayList<Administrador>();
+		
+		try {
+			
+			String sql= "SELECT * FROM administrador ORDER BY id ASC";
+			PreparedStatement listar = connection.prepareStatement(sql);
+			ResultSet resultado = listar.executeQuery();
+			
+			while(resultado.next()) {
+				
+				Administrador administrador = new Administrador();
+				administrador.setId(resultado.getLong("id"));
+				administrador.setNome(resultado.getString("nome"));
+				administrador.setCpf(resultado.getString("cpf"));
+				administrador.setEmail(resultado.getString("email"));
+				administrador.setSenha(resultado.getString("senha"));
+				administradores.add(administrador);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			try {
+				connection.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}
+		
+		return administradores;
+		
 	}
 	
 	public void deletarAdministrador(String email) {

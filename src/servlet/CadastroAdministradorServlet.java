@@ -40,6 +40,13 @@ public class CadastroAdministradorServlet extends HttpServlet {
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroAdministrador.jsp");
 			dispatcher.forward(request, response);
+			
+		}else if(acao.equalsIgnoreCase("listAdm")) {
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("listaAdm.jsp");
+			request.setAttribute("administradores", administradorDao.listarAdministradores());
+			dispatcher.forward(request, response);
+			
 		}
 		
 		
