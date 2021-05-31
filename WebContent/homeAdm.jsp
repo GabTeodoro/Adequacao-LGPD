@@ -115,15 +115,15 @@ body {
 			</div>
 			<div class="col-sm-6">
 				<h3>Minhas Empresas</h3>
-				<table>
-					<thead>
+				<table class="table table-hover">
+					<thead class="thead-dark">
 						<tr>
-							<th>Nome</th>
-							<th>CNPJ</th>
-							<th>Estado</th>
-							<th>Nota</th>
-							<th>Editar</th>
-							<th>Excluir</th>
+							<th scope="col">Nome</th>
+							<th scope="col">CNPJ</th>
+							<th scope="col">Estado</th>
+							<th scope="col">Nota</th>
+							<th scope="col">Editar</th>
+							<th scope="col">Excluir</th>
 						</tr>
 					</thead>
 					<tbody>
