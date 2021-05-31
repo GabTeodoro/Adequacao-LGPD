@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="resources/css/cadastroStyle.css">
 </head>
 <body>
-	<c:import url="menuHome.jsp" />
-	<div id="login-box" style="height: 450px">
+	<c:import url="menuAdm.jsp" />
+	<div id="login-box" style="height: 480px">
 		<div class="center" align="center">
 		<br>
 			<a> <img alt="" src="resources/img/user_icon.png" width="50"> </a>
@@ -21,6 +21,11 @@
 						<td><label>E-mail ADM: </label></td>
 						<td><input readonly="readonly" type="text" id="emailAdm" name="emailAdm"
 							placeholder="E-mailAdm" value="${administradorSessao.email}"></td>
+					</tr>
+					<tr>
+						<td><label>Id: </label></td>
+						<td><input readonly="readonly" type="text" id="id" name="id"
+							placeholder="Id" value="${user.id}"></td>
 					</tr>
 					<tr>
 						<td><label>Nome: </label></td>

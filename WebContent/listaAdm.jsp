@@ -115,13 +115,7 @@ body {
 				</c:forEach>
 			</tbody>
 		</table>
-
-		<ul>
-			<li><a class="btn btn-outline-dark activated"
-				style="border-radius: 25px"
-				href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Cadastrar
-					Nova Empresa</a></li>
-		</ul>
+		<br>
 	</div>
 
 </body>
