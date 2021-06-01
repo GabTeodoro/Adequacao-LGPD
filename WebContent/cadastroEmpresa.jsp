@@ -15,6 +15,7 @@
 	
 	<div id="login-box" style="height: 400px">
 		<div class="center" align="center">
+			<h2 style="color: black; padding-top: 15px; padding-bottom: 0px;">Cadastro Empresa</h2>
 		<br>
 			<a> <img alt="" src="resources/img/company_icon.png" width="50"> </a>
 			

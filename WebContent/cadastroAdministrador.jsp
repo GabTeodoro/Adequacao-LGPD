@@ -12,6 +12,7 @@
 	<c:import url="menuAdm.jsp" />
 	<div id="login-box" style="height: 480px">
 		<div class="center" align="center">
+			<h2 style="color: black; padding-top: 15px; margin-bottom: 0px;">Cadastro Administrador</h2>
 		<br>
 			<a> <img alt="" src="resources/img/user_icon.png" width="50"> </a>
 			
