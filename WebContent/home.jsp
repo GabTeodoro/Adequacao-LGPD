@@ -176,7 +176,6 @@ body {
 						</c:forEach>
 					</tbody>
 				</table>
-
 				<ul>
 					<li><a class="btn btn-outline-dark activated"
 						style="border-radius: 25px"

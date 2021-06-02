@@ -36,10 +36,10 @@ public class CadastroQuestaoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String acao = request.getParameter("acao");
-		String user = request.getParameter("user");
-		
+	
 		if(acao.equalsIgnoreCase("AddQuestion")) {
 			
+			String user = request.getParameter("user");
 			administrador = administradorDao.buscarAdministrador(user);
 			
 			request.getSession().setAttribute("administradorSessao", administrador);
@@ -47,6 +47,13 @@ public class CadastroQuestaoServlet extends HttpServlet {
 
 			RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroQuestao.jsp");
 			dispatcher.forward(request, response);
+			
+		}else if(acao.equalsIgnoreCase("teste")) {
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("testeFinal.jsp");
+			request.setAttribute("questoes", questaoDao.listarQuestoes());
+			dispatcher.forward(request, response);
+			
 			
 		}
 		
