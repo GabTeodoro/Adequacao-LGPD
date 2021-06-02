@@ -98,7 +98,7 @@ body {
 					</thead>
 					<tbody>
 						<!-- Cadastrar valores faltantes-->
-						<c:forEach>
+						
 							<tr>
 								<td><c:out value=""></c:out></td>
 								<td><c:out value=""></c:out></td>
@@ -114,7 +114,7 @@ body {
 										alt="Excluir" title="Excluir Questão" src="resources/img/exclude_icon.png" width="20px"
 										height="20px"></a></td>
 							</tr>
-						</c:forEach>
+						
 					</tbody>
 				</table>
 			</div>
@@ -142,7 +142,7 @@ body {
 					</thead>
 					<tbody>
 						<!-- Cadastrar valores faltantes-->
-						<c:forEach>
+						
 							<tr>
 								<td><c:out value=""></c:out></td>
 								<td><c:out value=""></c:out></td>
@@ -155,7 +155,7 @@ body {
 										alt="Excluir" title="Excluir Questão" src="resources/img/exclude_icon.png" width="20px"
 										height="20px"></a></td>
 							</tr>
-						</c:forEach>
+						
 					</tbody>
 				</table>
 			</div>

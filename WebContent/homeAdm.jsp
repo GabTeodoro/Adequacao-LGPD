@@ -79,7 +79,7 @@ body {
 		<div class="row" style="margin-left: 90px">
 			<div class="col-sm-6">
 				<br>
-				<form action="CadastroUsuarioServlet" method="get">
+				<form>
 					<table>
 						<tr>
 							<td><label>Id: </label></td>
@@ -108,7 +108,9 @@ body {
 						</tr>
 						<tr>
 							<td></td>
-							<td><input type="submit" value="Editar" style="width: 100%"></td>
+							<td><a class="btn btn-outline-dark activated"
+						style="border-radius: 25px; margin-bottom: 25px;"
+						href="CadastroAdministradorServlet?acao=editAdm&user=${user.email}">Editar</a></td>
 						</tr>
 					</table>
 				</form>

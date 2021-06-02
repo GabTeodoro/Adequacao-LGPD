@@ -47,7 +47,7 @@ public class CadastroUsuarioServlet extends HttpServlet {
 				
 				
 				
-			}else {
+			}else if(acao.equalsIgnoreCase("editUser")) {
 				
 				String user = request.getParameter("email");
 				

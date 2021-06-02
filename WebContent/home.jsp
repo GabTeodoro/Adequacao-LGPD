@@ -95,7 +95,7 @@ body {
 		<div class="row" style="margin-left: 90px">
 			<div class="col-sm-6">
 				<br>
-				<form action="CadastroUsuarioServlet" method="get">
+				<form>
 					<table>
 						<tr>
 							<td><label>Id: </label></td>
@@ -139,7 +139,9 @@ body {
 						</tr>
 						<tr>
 							<td></td>
-							<td><input type="submit" value="Editar" style="width: 100%"></td>
+							<td><a class="btn btn-outline-dark activated"
+						style="border-radius: 25px; margin-bottom: 25px;"
+						href="CadastroUsuarioServlet?acao=editUser&email=${user.email}">Editar</a></td>
 						</tr>
 					</table>
 				</form>
@@ -151,10 +153,10 @@ body {
 							<h3>Minhas Empresas</h3>
 						</div>
 						<div class="col-sm-4">
-							<button class="btn btn-outline-dark activated"
+							<a class="btn btn-outline-dark activated"
 						style="border-radius: 25px; margin-bottom: 25px;"
 						href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Cadastrar
-							Nova Empresa</button>
+							Nova Empresa</a>
 						</div>
 					</div>
 				</div>
