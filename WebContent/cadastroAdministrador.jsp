@@ -9,13 +9,20 @@
 <link rel="stylesheet" href="resources/css/cadastroStyle.css">
 </head>
 <body>
-	<c:import url="menuHome.jsp" />
-	<div id="login-box">
+	<c:import url="menuAdm.jsp" />
+	<div id="login-box" style="height: 480px">
 		<div class="center" align="center">
+			<h2 style="color: black; padding-top: 15px; margin-bottom: 0px;">Cadastro Administrador</h2>
+		<br>
 			<a> <img alt="" src="resources/img/user_icon.png" width="50"> </a>
 			
-			<form action="CadastroUsuarioServlet" method="post">
+			<form action="CadastroAdministradorServlet" method="post">
 				<table>
+					<tr>
+						<td><label>E-mail ADM: </label></td>
+						<td><input readonly="readonly" type="text" id="emailAdm" name="emailAdm"
+							placeholder="E-mailAdm" value="${administradorSessao.email}"></td>
+					</tr>
 					<tr>
 						<td><label>Id: </label></td>
 						<td><input readonly="readonly" type="text" id="id" name="id"
@@ -40,21 +47,6 @@
 						<td><label>Senha: </label></td>
 						<td><input type="password" id="senha" name="senha"
 							placeholder="Senha" value="${user.senha}"></td>
-					</tr>
-					<tr>
-						<td><label>RG: </label></td>
-						<td><input type="text" id="uf" name="rg" placeholder="RG"
-							value="${user.rg}"></td>
-					</tr>
-					<tr>
-						<td><label>Área: </label></td>
-						<td><input type="text" id="area" name="area"
-							placeholder="Área em que atua" value="${user.area}"></td>
-					</tr>
-					<tr>
-						<td><label>Cargo: </label></td>
-						<td><input type="text" id="cargo" name="cargo"
-							placeholder="Cargo atual" value="${user.cargo}"></td>
 					</tr>
 					<tr>
 						<td></td>

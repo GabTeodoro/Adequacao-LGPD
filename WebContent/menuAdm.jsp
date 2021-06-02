@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,6 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <style>
-
 a {
 	color: white;
 }
@@ -34,22 +34,19 @@ body {
 }
 </style>
 <body>
-
 	<nav class="navbar navbar-expand-sm navbar-transparent">
-		<!-- Logo Com foto -->
 		<div class="container">
-			<a class="navbar-brand" href="index.jsp">Logo </a>
+			<a class="navbar-brand" href="homeAdm.jsp">Logo </a>
 		</div>
-		<!-- Links No Menu de Acesso a outras Páginas -->
 		<ul class="navbar-nav">
-			<li class="nav-item"><a class="btn btn-outline-light active  "
-				style="border-radius: 25px" href="#">Ferramenta</a></li>
-			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active "
-				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
+				style="border-radius: 25px" href="CadastroAdministradorServlet?acao=addAdm&user=${user.email}">Cadastro</a></li>
 			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px" href="loginUsuario.jsp">Login</a></li>
+				style="border-radius: 25px" href="CadastroAdministradorServlet?acao=listAdm&user=${user.email}">Admins</a></li>
+			<li></li>
+			<li class="nav-item"><a class="btn btn-outline-light active"
+				style="border-radius: 25px" href="CadastroQuestaoServlet?acao=AddQuestion&user=${user.email}">Questões</a></li>
 			<li></li>
 		</ul>
 	</nav>

@@ -58,31 +58,29 @@ body {
 	background-color: #1E90FF;
 }
 
+/* Estilo do Footer */
+.footer-title {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.ul-footer {
+  list-style-type: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #1E90FF;
+}
+
 * {
 	box-sizing: border-box;
 }
 </style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm navbar-transparent">
-		<!-- Logo Com foto -->
-		<div class="container">
-			<a class="navbar-brand" href="home.jsp">Logo </a>
-		</div>
-		<!-- Links No Menu de Acesso a outras Páginas -->
-		<ul class="navbar-nav">
-			<li class="nav-item"><a class="btn btn-outline-light active  "
-				style="border-radius: 25px" href="#">Ferramenta</a></li>
-			<li></li>
-			<li class="nav-item"><a class="btn btn-outline-light active "
-				style="border-radius: 25px" href="#">Conta</a></li>
-			<li></li>
-			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px"
-				href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Empresa</a></li>
-			<li></li>
-		</ul>
-	</nav>
+	<c:import url="menuHome.jsp" />
 
 	<div class="container" style="margin-top: 80px">
 		<img alt="Logo" src="resources/img/logo.png" align="right" width="600">
@@ -147,16 +145,28 @@ body {
 				</form>
 			</div>
 			<div class="col-sm-6">
-				<h3>Minhas Empresas</h3>
-				<table>
-					<thead>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-8">
+							<h3>Minhas Empresas</h3>
+						</div>
+						<div class="col-sm-4">
+							<button class="btn btn-outline-dark activated"
+						style="border-radius: 25px; margin-bottom: 25px;"
+						href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Cadastrar
+							Nova Empresa</button>
+						</div>
+					</div>
+				</div>
+				<table class="table table-hover table-bordered">
+					<thead class="thead-dark">
 						<tr>
-							<th>Nome</th>
-							<th>CNPJ</th>
-							<th>Estado</th>
-							<th>Nota</th>
-							<th>Editar</th>
-							<th>Excluir</th>
+							<th scope="col">Nome</th>
+							<th scope="col">CNPJ</th>
+							<th scope="col">Estado</th>
+							<th scope="col">Nota</th>
+							<th scope="col">Editar</th>
+							<th scope="col">Excluir</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -166,21 +176,72 @@ body {
 								<td><c:out value="${empresa.cnpj}"></c:out></td>
 								<td><c:out value="${empresa.estado}"></c:out></td>
 								<td><c:out value="${empresa.nota}"></c:out></td>
-								<td><a href="CadastroEmpresaServlet?acao=edit&empresa=${cnpj}"></a></td>
-								<td>Excluir</td>
+								<td><a
+									href="CadastroEmpresaServlet?acao=editEmpresa&user=${user.email}&empresa=${empresa.id}"><img
+										alt="Editar" title="Editar Empresa" src="resources/img/edit_icon.png" width="20px"
+										height="20px"></a></td>
+								<td><a
+									href="CadastroEmpresaServlet?acao=removeEmpresa&user=${user.email}&empresa=${empresa.id}"><img
+										alt="Excluir" title="Excluir Empresa" src="resources/img/exclude_icon.png" width="20px"
+										height="20px"></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
-				
-				<ul>
-					<li class="nav-item"><a class="btn btn-outline-dark activated"
-						style="border-radius: 25px"
-						href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Cadastrar
-							Nova Empresa</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
+
+	<footer class="container-fluid bg-footer margin footer ul-footer" style="margin-top: 12px; margin-bottom: 12px;">
+        <p class="footer-title">Desenvolvido por</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Evanilson Peres</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">evanilson@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Gabriel Teodoro</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">gabriel@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Isabelle Aguiar Silva</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">isabelle@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Ivan Souto</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">ivan@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Matheus Jatobá</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">matheus@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

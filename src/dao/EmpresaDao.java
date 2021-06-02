@@ -76,7 +76,41 @@ public class EmpresaDao {
 
 	}
 	
-	
+	public Empresa buscarEmpresa(String id) {
+		
+		try {
+			
+			String sql = "SELECT * FROM empresa WHERE id = '" + id + "'";
+			PreparedStatement buscar = connection.prepareStatement(sql);
+			ResultSet resultadoBusca = buscar.executeQuery();
+			
+			if(resultadoBusca.next()) {
+				
+				Empresa empresa = new Empresa();
+				empresa.setId(resultadoBusca.getLong("id"));
+				empresa.setNome(resultadoBusca.getString("nome"));
+				empresa.setCnpj(resultadoBusca.getString("cnpj"));
+				empresa.setEmailUsuario(resultadoBusca.getString("email_usuario"));
+				empresa.setEstado(resultadoBusca.getString("estado"));
+				empresa.setNota(resultadoBusca.getDouble("nota"));
+				
+				return empresa;
+				
+				
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			try {
+				connection.rollback();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		
+		return null;
+	}
 
 	public void deletarEmpresa(String id) {
 
@@ -102,15 +136,13 @@ public class EmpresaDao {
 		
 		try {
 			
-			String sql = "UPDATE empresa set nome = ?, cnpj = ?, email_usuario = ?, estado = ?, nota = ? WHERE id = '"
+			String sql = "UPDATE empresa set nome = ?, cnpj = ?, email_usuario = ? WHERE id = '"
 					+ empresa.getId() + "'";
 			PreparedStatement atualizar = connection.prepareStatement(sql);
 			
 			atualizar.setString(1, empresa.getNome());
 			atualizar.setString(2, empresa.getCnpj());
 			atualizar.setString(3, empresa.getEmailUsuario());
-			atualizar.setString(4, empresa.getEstado());
-			atualizar.setDouble(5, empresa.getNota());
 			atualizar.execute();
 			connection.commit();
 			

@@ -32,17 +32,39 @@ public class CadastroEmpresaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String acao = request.getParameter("acao");
+		String user = request.getParameter("user");
+		Usuario usuario = usuarioDao.buscarUsuario(user);
 		
 		if(acao.equalsIgnoreCase("addEmpresa")) {
 			
-			String user = request.getParameter("user");
-			Usuario usuario = usuarioDao.buscarUsuario(user);
-			
+
 			request.getSession().setAttribute("usuarioEmpresa", usuario);
 			request.setAttribute("usuarioEmpresa", usuario);
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroEmpresa.jsp");
 			dispatcher.forward(request, response);
+			
+		}else if (acao.equalsIgnoreCase("editEmpresa")) {
+			
+			
+			String id = request.getParameter("empresa");
+			empresa = empresaDao.buscarEmpresa(id);
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroEmpresa.jsp");
+			request.setAttribute("usuarioEmpresa", usuario);
+			request.setAttribute("empresa", empresa);
+			dispatcher.forward(request, response);
+			
+		} else if(acao.equalsIgnoreCase("removeEmpresa")) {
+			
+			String id = request.getParameter("empresa");
+			empresaDao.deletarEmpresa(id);
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+			request.setAttribute("empresas", empresaDao.listarEmpresa(usuario.getEmail()));
+			request.setAttribute("user", usuario);
+			dispatcher.forward(request, response);
+			
 		}
 		
 		
@@ -53,6 +75,7 @@ public class CadastroEmpresaServlet extends HttpServlet {
 		
 		Usuario usuario = (Usuario) request.getSession().getAttribute("usuarioEmpresa");
 		
+		String id = request.getParameter("id");
 		String nome = request.getParameter("nome");
 		String cnpj = request.getParameter("cnpj");
 		
@@ -60,9 +83,20 @@ public class CadastroEmpresaServlet extends HttpServlet {
 		empresa.setCnpj(cnpj);
 		empresa.setEmailUsuario(usuario.getEmail());
 		
-		empresaDao.cadastrarEmpresa(empresa);
+		if(id == null || id.isEmpty()) {
+			
+			empresaDao.cadastrarEmpresa(empresa);
+			
+		}else if (id != null && !id.isEmpty()) {
+			
+			empresa.setId(Long.parseLong(id));
+			empresaDao.editarEmpresa(empresa);	
+		}
+		
+		
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+		request.setAttribute("empresas", empresaDao.listarEmpresa(usuario.getEmail()));
 		request.setAttribute("user", usuario);
 		dispatcher.forward(request, response);
 		

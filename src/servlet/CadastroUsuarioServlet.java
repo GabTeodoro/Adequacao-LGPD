@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.EmpresaDao;
 import dao.UsuarioDao;
@@ -29,15 +30,35 @@ public class CadastroUsuarioServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+			String acao  = request.getParameter("acao");
 			
-			String user = request.getParameter("email");
-			
-			usuario = usuariodao.buscarUsuario(user);
-			
-			RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroUsuario.jsp");
-			request.setAttribute("user", usuario);
-			dispatcher.forward(request, response);
+			if(acao.equalsIgnoreCase("listar")) {
+				
+				usuario = (Usuario) request.getSession().getAttribute("logado");
+				
+				String [] nomeCompleto = usuario.getNome().split(" ");
+				String primeiroNome = nomeCompleto[0];
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+				request.setAttribute("user", usuario);
+				request.setAttribute("primeiroNome", primeiroNome);
+				request.setAttribute("empresas", empresaDao.listarEmpresa(usuario.getEmail()));
+				dispatcher.forward(request, response);
+				
+				
+				
+			}else {
+				
+				String user = request.getParameter("email");
+				
+				usuario = usuariodao.buscarUsuario(user);
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroUsuario.jsp");
+				request.setAttribute("user", usuario);
+				dispatcher.forward(request, response);
 
+			}
+			
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -80,6 +101,8 @@ public class CadastroUsuarioServlet extends HttpServlet {
 				
 				
 				RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+				HttpSession session = request.getSession();
+				session.setAttribute("logado", usuario);
 				request.setAttribute("user", usuario);
 				request.setAttribute("primeiroNome", primeiroNome);
 				dispatcher.forward(request, response);

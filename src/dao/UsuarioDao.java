@@ -16,6 +16,7 @@ public class UsuarioDao {
 		connection = SingleConnection.getConnection();
 	}
 
+	// Método usado no Login.
 	public boolean validarUsuario(String email, String senha) throws SQLException {
 
 		String sql = "SELECT * FROM usuario WHERE email = '" + email + "' AND senha = '" + senha + "'";
@@ -88,7 +89,7 @@ public class UsuarioDao {
 			String sql = "INSERT INTO usuario (nome, cpf, email, senha, rg, area, cargo) VALUES (?,?,?,?,?,?,?)";
 			PreparedStatement cadastrar = connection.prepareStatement(sql);
 
-			cadastrar.setNString(1, usuario.getNome());
+			cadastrar.setString(1, usuario.getNome());
 			cadastrar.setString(2, usuario.getCpf());
 			cadastrar.setString(3, usuario.getEmail());
 			cadastrar.setString(4, usuario.getSenha());
