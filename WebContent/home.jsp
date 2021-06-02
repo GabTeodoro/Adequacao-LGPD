@@ -145,8 +145,20 @@ body {
 				</form>
 			</div>
 			<div class="col-sm-6">
-				<h3>Minhas Empresas</h3>
-				<table class="table table-hover">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-8">
+							<h3>Minhas Empresas</h3>
+						</div>
+						<div class="col-sm-4">
+							<button class="btn btn-outline-dark activated"
+						style="border-radius: 25px; margin-bottom: 25px;"
+						href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Cadastrar
+							Nova Empresa</button>
+						</div>
+					</div>
+				</div>
+				<table class="table table-hover table-bordered">
 					<thead class="thead-dark">
 						<tr>
 							<th scope="col">Nome</th>
@@ -176,13 +188,6 @@ body {
 						</c:forEach>
 					</tbody>
 				</table>
-
-				<ul>
-					<li><a class="btn btn-outline-dark activated"
-						style="border-radius: 25px"
-						href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Cadastrar
-							Nova Empresa</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
