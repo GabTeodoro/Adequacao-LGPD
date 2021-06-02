@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="resources/css/loginStyle.css">
 </head>
 <body>
-	<c:import url="menu.jsp" />
+	<c:import url="menuHome.jsp" />
 	<div id="login-box" style="height: 280px">
 		<div class="center" align="center">
 		<br>
