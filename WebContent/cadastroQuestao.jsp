@@ -12,16 +12,22 @@
 	<c:import url="menuHome.jsp" />
 	<div id="login-box" style="height: 750px">
 		<div class="center" align="center">
-		<br>
-			<a> <img alt="" src="resources/img/question_icon.png" width="50">
+			<br> <a> <img alt="" src="resources/img/question_icon.png"
+				width="50">
 			</a>
 
 			<form action="CadastroQuestaoServlet" method="post">
 				<table>
 					<tr>
 						<td><label></label></td>
-						<td><input readonly="readonly" type="hidden" id="id" name="id"
-							placeholder="Id" value="${questao.id}"></td>
+						<td><input readonly="readonly" type="hidden" id="emailAdm"
+							name="emailAdm" placeholder="E-mailAdm"
+							value="${administradorSessao.email}"></td>
+					</tr>
+					<tr>
+						<td><label></label></td>
+						<td><input readonly="readonly" type="hidden" id="id"
+							name="id" placeholder="Id" value="${questao.id}"></td>
 					</tr>
 					<tr>
 						<td><label>Pergunta: </label></td>

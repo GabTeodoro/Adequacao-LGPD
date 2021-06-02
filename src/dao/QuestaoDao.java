@@ -22,7 +22,7 @@ public class QuestaoDao {
 
 		try {
 
-			String sql = "INSERT INTO questao (pergunta, respostaCorreta, respostaErrada1, respostaErrada2, respostaErrada3) VALUES (?,?,?,?)";
+			String sql = "INSERT INTO questao (pergunta, respostaCorreta, respostaErrada1, respostaErrada2, respostaErrada3) VALUES (?,?,?,?,?)";
 			PreparedStatement inserir = connection.prepareStatement(sql);
 
 			inserir.setString(1, questao.getPergunta());

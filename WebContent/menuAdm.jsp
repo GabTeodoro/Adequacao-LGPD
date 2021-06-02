@@ -46,7 +46,7 @@ body {
 				style="border-radius: 25px" href="CadastroAdministradorServlet?acao=listAdm&user=${user.email}">Admins</a></li>
 			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px" href="cadastroQuestao.jsp">Questões</a></li>
+				style="border-radius: 25px" href="CadastroQuestaoServlet?acao=AddQuestion&user=${user.email}">Questões</a></li>
 			<li></li>
 		</ul>
 	</nav>
