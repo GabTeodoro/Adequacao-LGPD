@@ -33,7 +33,18 @@ public class LoginUsuarioServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doPost(request, response);
+		
+		String acao = request.getParameter("acao");
+		
+		if(acao.equalsIgnoreCase("logoff")) {
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+			request.setAttribute("user", null);
+			HttpSession session = request.getSession();
+			session.setAttribute("logado", null);
+			dispatcher.forward(request, response);
+			
+		}
 	}
 
 	

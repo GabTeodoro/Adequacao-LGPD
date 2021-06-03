@@ -36,7 +36,8 @@ body {
 <body>
 	<nav class="navbar navbar-expand-sm navbar-transparent">
 		<div class="container">
-			<a class="navbar-brand" href="homeAdm.jsp">Logo </a>
+			<a class="navbar-brand" href="CadastroAdministradorServlet?acao=listar&user=${user.email}"><img
+					src="resources/img/logo_icon4.png" width="70"></a>
 		</div>
 		<ul class="navbar-nav">
 			<li class="nav-item"><a class="btn btn-outline-light active "
@@ -47,6 +48,9 @@ body {
 			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-light active"
 				style="border-radius: 25px" href="CadastroQuestaoServlet?acao=AddQuestion&user=${user.email}">Questões</a></li>
+			<li></li>
+			<li class="nav-item"><a class="btn btn-outline-dark"
+				style="border-radius: 25px" href="LoginUsuarioServlet?acao=logoff">Sair!</a></li>
 			<li></li>
 		</ul>
 	</nav>

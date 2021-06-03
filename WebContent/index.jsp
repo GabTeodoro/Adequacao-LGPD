@@ -59,20 +59,7 @@ body {
 </style>
 </head>
 <body>
-<c:import url="menuHome.jsp" />
-	<!-- <nav class="navbar navbar-expand-sm navbar-transparent">
-		<div class="container">
-			<a class="navbar-brand" href="index.jsp">Logo </a>
-		</div>
-		<ul class="navbar-nav">
-			<li class="nav-item"><a class="btn btn-outline-light active "
-				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
-			<li></li>
-			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px" href="loginUsuario.jsp">Login</a></li>
-			<li></li>
-		</ul>
-	</nav> -->
+	<c:import url="menuHome.jsp" />
 
 	<div class="container" style="margin-top: 80px">
 		<img alt="Logo" src="resources/img/logo.png" align="right" width="600">
@@ -81,41 +68,49 @@ body {
 		<h1 align="center">A MELHOR FERRAMENTA DE LGPD!</h1>
 		<input type="text" type="email" id="email" name="email"
 			style="border-radius: 25px; margin-top: 50px; width: 350px"
-			placeholder="  meuEmail@mail.com">
-		<button type="submit" class="btn btn-outline-light active"
-			style="border-radius: 25px">Ir!</button>
-		<br> <a style="color: white;">Insira seu e-mail e prossiga
-			com o cadastro.</a>
+			placeholder="  meuEmail@mail.com"> <a
+			type="submit" class="btn btn-outline-light active"
+			href="cadastroUsuario.jsp" style="border-radius: 25px">Ir!</a> <br>
+		<a style="color: white;">Insira seu e-mail e prossiga com o
+			cadastro.</a>
 	</div>
 
 	<div class="container-fluid"
 		style="margin-top: 200px; background-color: white;">
 		<br>
 		<h3>O que é a LGPD?</h3>
-		<h4>Sed ut perspiciatis unde omnis iste natus error sit
-			voluptatem accusantium doloremque laudantium, totam rem aperiam,
-			eaque ipsa quae ab illo inventore veritatis et quasi architecto
-			beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-			voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-			magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-			quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-			adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-			labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-			veniam, quis nostrum.</h4>
+		<h4>LGPD é a lei geral de proteção de dados, lei número
+			13.709/2018 aprovada em agosto de 2018 que regula as atividades e
+			tratamentos de dados pessoais que também altera os artigos 7 0 e 1 6
+			0 do Marco Civil da internet com a finalidade de impor regras o
+			tratamento de dados pessoais tendo como finalidade proteger o direito
+			a liberdade e a privacidade de livre desenvolvimento dos cidadãos. A
+			lei não cita apenas as informações mantidas no sistema on-line mais
+			sua criação se deve pela complexidade que a gestão de dados ganhou na
+			economia digital. Entre os dados pessoais que segundo a LGPD são
+			quaisquer informações relacionadas a pessoa natural identificada ou
+			identificável, suas leis valem para pessoas físicas e jurídicas (
+			públicas ou privadas ) servindo principalmente para empresas e órgãos
+			públicos serem mais transparentes e responsáveis com o uso dos dados
+			alheios, com o risco de multa para as empresas que pode chegar a 50
+			milhões por infração. As empresas possuem dados pessoais dos usuários
+			em diversas áreas e sistemas e muitas vezes os dados dos usuários
+			estão presentes em várias áreas como por exemplo na área financeira,
+			vendas, marketing, suporte entre outras. As empresas possuindo tantos
+			dados de seus usuários devem adotar medidas adequadas aos princípios
+			previstos na LGPD tendo em vista que os titulares dos dados têm o
+			direito de ter o controle de seus dados.</h4>
 
 
 		<div style="margin-top: 50px; background-color: white;">
 			<h3>Sobre o nosso teste!</h3>
-			<h4>At vero eos et accusamus et iusto odio dignissimos ducimus
-				qui blanditiis praesentium voluptatum deleniti atque corrupti quos
-				dolores et quas molestias excepturi sint occaecati cupiditate non
-				provident, similique sunt in culpa qui officia deserunt mollitia
-				animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
-				est et expedita distinctio. Nam libero tempore, cum soluta nobis est
-				eligendi optio cumque nihil impedit quo minus id quod maxime placeat
-				facere possimus, omnis voluptas assumenda est, omnis dolor
-				repellendus. Temporibus autem quibusdam et aut officiis debitis aut
-				rerum necessitatibus saep.</h4>
+			<h4>Nossos testes são questões de alternativas sobre a LGPD (Lei
+				Geral de Proteção de Dados) que deveram ser preenchidos de acordo
+				com o funcionamento de sua empresa. Serão 10 questões que ao final
+				será mostrado sua pontuação de acertos e determinando se a companhia
+				que trabalha está de acordo com a LGPD. Caso não atinja a pontuação
+				necessária, haverá uma identificação do que é necessário para se
+				adequar as normas.</h4>
 		</div>
 	</div>
 </body>

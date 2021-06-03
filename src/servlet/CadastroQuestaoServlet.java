@@ -1,6 +1,10 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +16,8 @@ import javax.servlet.http.HttpSession;
 
 import dao.AdministradorDao;
 import dao.QuestaoDao;
+import dto.QuestaoDto;
+import dto.RespostaDto;
 import model.Administrador;
 import model.Questao;
 
@@ -50,8 +56,43 @@ public class CadastroQuestaoServlet extends HttpServlet {
 			
 		}else if(acao.equalsIgnoreCase("teste")) {
 			
+			 List<Questao> questoes = questaoDao.listarQuestoes();
+			 List<QuestaoDto> questoesDto = new ArrayList<QuestaoDto>();
+			 
+			 questoes.forEach(q -> {
+				 QuestaoDto qDto = new QuestaoDto();
+				 qDto.setId(q.getId());
+				 qDto.setPergunta(q.getPergunta());
+				 
+				 RespostaDto r1 = new RespostaDto();
+				 r1.setId(1L);
+				 r1.setResposta(q.getRespostaCorreta());
+				 r1.setRespostaCorreta(true);
+				 
+				 RespostaDto r2 = new RespostaDto();
+				 r2.setId(2L);
+				 r2.setResposta(q.getRespostaErrada()[0]);
+				 r2.setRespostaCorreta(false);
+				 
+				 RespostaDto r3 = new RespostaDto();
+				 r3.setId(3L);
+				 r3.setResposta(q.getRespostaErrada()[1]);
+				 r3.setRespostaCorreta(false);
+				 
+				 RespostaDto r4 = new RespostaDto();
+				 r4.setId(2L);
+				 r4.setResposta(q.getRespostaErrada()[2]);
+				 r4.setRespostaCorreta(false);
+				 
+				 var respostas = Arrays.asList(r1, r2, r3, r4);
+				 Collections.shuffle(respostas);
+				 qDto.setRespostas(respostas);
+				 
+				 questoesDto.add(qDto);
+			 });
+			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("testeFinal.jsp");
-			request.setAttribute("questoes", questaoDao.listarQuestoes());
+			request.setAttribute("questoes", questoesDto);
 			dispatcher.forward(request, response);
 			
 			

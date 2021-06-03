@@ -35,13 +35,15 @@ body {
 </style>
 <body>
 	<nav class="navbar navbar-expand-sm navbar-transparent">
-	<c:if test="${not empty logado}">
-		<!-- Logo Com foto -->
-		<div class="container">
-			<a class="navbar-brand" href="CadastroUsuarioServlet?acao=listar&user=${logado.email}">Logo </a>
-		</div>
-		<!-- Links No Menu de Acesso a outras Páginas -->
-		
+		<c:if test="${not empty logado}">
+			<!-- Logo Com foto -->
+			<div class="container">
+				<a class="navbar-brand"
+					href="CadastroUsuarioServlet?acao=listar&user=${logado.email}"><img
+					src="resources/img/logo_icon4.png" width="70"></a>
+			</div>
+			<!-- Links No Menu de Acesso a outras Páginas -->
+
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="btn btn-outline-light active  "
 					style="border-radius: 25px" href="dicasTeste.jsp">Teste</a></li>
@@ -51,21 +53,25 @@ body {
 					style="border-radius: 25px"
 					href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Empresa</a></li>
 				<li></li>
+				<li class="nav-item"><a class="btn btn-outline-dark"
+				style="border-radius: 25px" href="LoginUsuarioServlet?acao=logoff">Sair!</a></li>
+			<li></li>
 			</ul>
 		</c:if>
-		
+
 		<c:if test="${empty logado}">
-		<div class="container">
-			<a class="navbar-brand" href="index.jsp">Logo </a>
-		</div>
-		<ul class="navbar-nav">
-			<li class="nav-item"><a class="btn btn-outline-light active "
-				style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
-			<li></li>
-			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px" href="loginUsuario.jsp">Login</a></li>
-			<li></li>
-		</ul>
+			<div class="container">
+				<a class="navbar-brand" href="index.jsp"><img
+					src="resources/img/logo_icon4.png" width="70"></a>
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="btn btn-outline-light active "
+					style="border-radius: 25px" href="cadastroUsuario.jsp">Cadastro</a></li>
+				<li></li>
+				<li class="nav-item"><a class="btn btn-outline-light active"
+					style="border-radius: 25px" href="loginUsuario.jsp">Login</a></li>
+				<li></li>
+			</ul>
 		</c:if>
 	</nav>
 

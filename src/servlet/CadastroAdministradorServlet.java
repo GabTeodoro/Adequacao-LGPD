@@ -63,6 +63,20 @@ public class CadastroAdministradorServlet extends HttpServlet {
 			request.setAttribute("administradores", administradorDao.listarAdministradores());
 			dispatcher.forward(request, response);
 
+		} else if (acao.equalsIgnoreCase("listar")) {
+			
+			administrador = administradorDao.buscarAdministrador(user);
+			
+			String[] nomeCompleto = administrador.getNome().split(" ");
+			String primeiroNome = nomeCompleto[0];
+			
+			HttpSession session = request.getSession();
+			RequestDispatcher dispatcher = request.getRequestDispatcher("homeAdm.jsp");
+			request.setAttribute("user", administrador);
+			session.setAttribute("user", administrador);
+			request.setAttribute("primeiroNome", primeiroNome);
+			dispatcher.forward(request, response);
+			
 		}
 
 	}
