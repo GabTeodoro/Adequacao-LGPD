@@ -157,5 +157,30 @@ public class EmpresaDao {
 		
 		return empresa;
 	}
+	
+public Empresa editarStatusEmpresa(Empresa empresa) {
+		
+		try {
+			
+			String sql = "UPDATE empresa set estado = ?, nota = ?, WHERE id = '"
+					+ empresa.getId() + "'";
+			PreparedStatement atualizar = connection.prepareStatement(sql);
+			
+			atualizar.setString(1, empresa.getEstado());
+			atualizar.setDouble(2, empresa.getNota());
+			atualizar.execute();
+			connection.commit();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			try {
+				connection.rollback();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		
+		return empresa;
+	}
 
 }

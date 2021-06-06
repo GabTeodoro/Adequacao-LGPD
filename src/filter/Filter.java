@@ -12,33 +12,35 @@ import javax.servlet.annotation.WebFilter;
 
 import connection.SingleConnection;
 
-@WebFilter(urlPatterns = { "/" })
+@WebFilter(urlPatterns = {"/*"})
 public class Filter implements javax.servlet.Filter {
 
 	private static Connection connection;
 
+	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 
-//		try {
-//
-//			chain.doFilter(request, response);
-//			connection.commit();
-//		} catch (Exception e) {
-//			try {
-//
-//				e.printStackTrace();
-//				connection.rollback();
-//			} catch (Exception e2) {
-//				e2.printStackTrace();
-//			}
-//		}
+		try {
+
+			chain.doFilter(request, response);
+			connection.commit();
+		} catch (Exception e) {
+			try {
+
+				e.printStackTrace();
+				connection.rollback();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
 
 	}
-
+	
+	@Override
 	public void init(FilterConfig fConfig) throws ServletException {
 
-//		connection = SingleConnection.getConnection();
+		connection = SingleConnection.getConnection();
 
 	}
 
