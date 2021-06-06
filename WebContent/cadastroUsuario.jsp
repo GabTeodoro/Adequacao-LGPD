@@ -12,14 +12,17 @@
 	<c:import url="menuHome.jsp" />
 	<div id="login-box">
 		<div class="center" align="center">
-			<a> <img alt="" src="resources/img/user_icon.png" width="50"> </a>
-			
-			<form action="CadastroUsuarioServlet" method="post">
+			<br> <a> <img alt="" src="resources/img/user_icon.png"
+				width="50">
+			</a>
+
+			<form action="CadastroUsuarioServlet" method="post"
+				onsubmit="return validarCampos()? true : false;">
 				<table>
 					<tr>
-						<td><label>Id: </label></td>
-						<td><input readonly="readonly" type="text" id="id" name="id"
-							placeholder="Id" value="${user.id}"></td>
+						<td><label></label></td>
+						<td><input readonly="readonly" type="hidden" id="id"
+							name="id" placeholder="Id" value="${user.id}"></td>
 					</tr>
 					<tr>
 						<td><label>Nome: </label></td>
@@ -43,7 +46,7 @@
 					</tr>
 					<tr>
 						<td><label>RG: </label></td>
-						<td><input type="text" id="uf" name="rg" placeholder="RG"
+						<td><input type="text" id="rg" name="rg" placeholder="RG"
 							value="${user.rg}"></td>
 					</tr>
 					<tr>
@@ -65,6 +68,35 @@
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function validarCampos() {
 
+			if (document.getElementById("nome").value == '') {
+				alert('O campo Nome é obrigatório.');
+				return false;
+
+			} else if (document.getElementById("cpf").value == '') {
+				alert('O campo CPF é obrigatório.');
+				return false;
+			} else if (document.getElementById("email").value == '') {
+				alert('O campo E-mail é obrigatório.');
+				return false;
+			} else if (document.getElementById("senha").value == '') {
+				alert('O campo Senha é obrigatório.');
+				return false;
+			} else if (document.getElementById("rg").value == '') {
+				alert('O campo RG é obrigatório.');
+				return false;
+			} else if (document.getElementById("area").value == '') {
+				alert('O campo Área é obrigatório.');
+				return false;
+			} else if (document.getElementById("cargo").value == '') {
+				alert('O campo Cargo é obrigatório.');
+				return false;
+			}
+
+			return true;
+		}
+	</script>
 </body>
 </html>

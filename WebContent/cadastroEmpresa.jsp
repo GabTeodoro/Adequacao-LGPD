@@ -12,24 +12,28 @@
 </head>
 <body>
 	<c:import url="menuHome.jsp" />
-	
+
 	<div id="login-box" style="height: 400px">
 		<div class="center" align="center">
-			<h2 style="color: black; padding-top: 15px; padding-bottom: 0px;">Cadastro Empresa</h2>
-		<br>
-			<a> <img alt="" src="resources/img/company_icon.png" width="50"> </a>
-			
-			<form action="CadastroEmpresaServlet" method="post">
+			<h2 style="color: black; padding-top: 15px; padding-bottom: 0px;">Cadastro
+				Empresa</h2>
+			<br> <a> <img alt="" src="resources/img/company_icon.png"
+				width="50">
+			</a>
+
+			<form action="CadastroEmpresaServlet" method="post"
+				onsubmit="return validarCampos()? true : false;">
 				<table>
 					<tr>
 						<td><label></label></td>
-						<td><input readonly="readonly" type="hidden" id="id" name="id"
-							placeholder="Id da Empresa" value="${empresa.id}"></td>
+						<td><input readonly="readonly" type="hidden" id="id"
+							name="id" placeholder="Id da Empresa" value="${empresa.id}"></td>
 					</tr>
 					<tr>
 						<td><label>E-mail: </label></td>
-						<td><input readonly="readonly" type="text" id="email" name="email"
-							placeholder="E-mail do usuário" value="${usuarioEmpresa.email}"></td>
+						<td><input readonly="readonly" type="text" id="email"
+							name="email" placeholder="E-mail do usuário"
+							value="${usuarioEmpresa.email}"></td>
 					</tr>
 					<tr>
 						<td><label>Nome: </label></td>
@@ -38,7 +42,8 @@
 					</tr>
 					<tr>
 						<td><label>CNPJ: </label></td>
-						<td><input type="text" id="cnpj" name="cnpj" placeholder="CNPJ da Empresa" value="${empresa.cnpj}"></td>
+						<td><input type="text" id="cnpj" name="cnpj"
+							placeholder="CNPJ da Empresa" value="${empresa.cnpj}"></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -49,6 +54,19 @@
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function validarCampos() {
 
+			if (document.getElementById("nome").value == '') {
+				alert('O campo Nome é obrigatório.');
+				return false;
+
+			} else if (document.getElementById("cnpj").value == '') {
+				alert('O campo CNPJ é obrigatório.');
+				return false;
+			}
+			return true;
+		}
+	</script>
 </body>
 </html>

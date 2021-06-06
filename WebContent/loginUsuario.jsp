@@ -10,13 +10,15 @@
 </head>
 <body>
 	<c:import url="menuHome.jsp" />
+	<h2 id="msg" align="center">${msg}</h2>
 	<div id="login-box" style="height: 320px">
 		<div class="center" align="center">
 			<h2 style="color: black; padding-top: 10px; margin-bottom: 0px;">Login</h2>
-		<br>
-			<a> <img alt="" src="resources/img/user_icon.png" width="50"> </a>
-			
-			<form action="LoginUsuarioServlet" method="post">
+			<br> <a> <img alt="" src="resources/img/user_icon.png"
+				width="50">
+			</a>
+			<form action="LoginUsuarioServlet" method="post"
+				onsubmit="return validarCampos()? true : false;">
 				<table>
 					<tr>
 						<td><label>E-mail: </label></td>
@@ -37,6 +39,19 @@
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function validarCampos() {
 
+			if (document.getElementById("email").value == '') {
+				alert('O campo E-mail é obrigatório.');
+				return false;
+
+			} else if (document.getElementById("senha").value == '') {
+				alert('O campo Senha é obrigatório.');
+				return false;
+			}
+			return true;
+		}
+	</script>
 </body>
 </html>

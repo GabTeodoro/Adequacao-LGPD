@@ -12,21 +12,25 @@
 	<c:import url="menuAdm.jsp" />
 	<div id="login-box" style="height: 480px">
 		<div class="center" align="center">
-			<h2 style="color: black; padding-top: 15px; margin-bottom: 0px;">Cadastro Administrador</h2>
-		<br>
-			<a> <img alt="" src="resources/img/user_icon.png" width="50"> </a>
-			
-			<form action="CadastroAdministradorServlet" method="post">
+			<h2 style="color: black; padding-top: 15px; margin-bottom: 0px;">Cadastro
+				Administrador</h2>
+			<br> <a> <img alt="" src="resources/img/user_icon.png"
+				width="50">
+			</a>
+
+			<form action="CadastroAdministradorServlet" method="post"
+				onsubmit="return validarCampos()? true : false;">
 				<table>
 					<tr>
 						<td><label></label></td>
-						<td><input readonly="readonly" type="hidden" id="emailAdm" name="emailAdm"
-							placeholder="E-mailAdm" value="${administradorSessao.email}"></td>
+						<td><input readonly="readonly" type="hidden" id="emailAdm"
+							name="emailAdm" placeholder="E-mailAdm"
+							value="${administradorSessao.email}"></td>
 					</tr>
 					<tr>
 						<td><label></label></td>
-						<td><input readonly="readonly" type="hidden" id="id" name="id"
-							placeholder="Id" value="${user.id}"></td>
+						<td><input readonly="readonly" type="hidden" id="id"
+							name="id" placeholder="Id" value="${user.id}"></td>
 					</tr>
 					<tr>
 						<td><label>Nome: </label></td>
@@ -57,6 +61,26 @@
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function validarCampos() {
 
+			if (document.getElementById("nome").value == '') {
+				alert('O campo Nome é obrigatório.');
+				return false;
+
+			} else if (document.getElementById("cpf").value == '') {
+				alert('O campo CPF é obrigatório.');
+				return false;
+			} else if (document.getElementById("email").value == '') {
+				alert('O campo E-mail é obrigatório.');
+				return false;
+			} else if (document.getElementById("senha").value == '') {
+				alert('O campo Senha é obrigatório.');
+				return false;
+			}
+
+			return true;
+		}
+	</script>
 </body>
 </html>

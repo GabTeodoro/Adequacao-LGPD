@@ -16,7 +16,8 @@
 				width="50">
 			</a>
 
-			<form action="CadastroQuestaoServlet" method="post">
+			<form action="CadastroQuestaoServlet" method="post"
+				onsubmit="return validarCampos()? true : false;">
 				<table>
 					<tr>
 						<td><label></label></td>
@@ -63,6 +64,29 @@
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function validarCampos() {
 
+			if (document.getElementById("pergunta").value == '') {
+				alert('O campo Pergunta é obrigatório.');
+				return false;
+
+			} else if (document.getElementById("respostaCorreta").value == '') {
+				alert('O campo Resposta Correta é obrigatório.');
+				return false;
+			} else if (document.getElementById("respostaErrada1").value == '') {
+				alert('O campo Resposta Errada 1 é obrigatório.');
+				return false;
+			} else if (document.getElementById("respostaErrada2").value == '') {
+				alert('O campo Resposta Errada 2 é obrigatório.');
+				return false;
+			} else if (document.getElementById("respostaErrada3").value == '') {
+				alert('O campo Resposta Errada 3 é obrigatório.');
+				return false;
+			}
+
+			return true;
+		}
+	</script>
 </body>
 </html>
