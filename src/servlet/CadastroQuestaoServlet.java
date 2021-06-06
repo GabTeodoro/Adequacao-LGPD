@@ -16,9 +16,11 @@ import javax.servlet.http.HttpSession;
 
 import dao.AdministradorDao;
 import dao.QuestaoDao;
+import dao.EmpresaDao;
 import dto.QuestaoDto;
 import dto.RespostaDto;
 import model.Administrador;
+import model.Empresa;
 import model.Questao;
 
 
@@ -31,6 +33,9 @@ public class CadastroQuestaoServlet extends HttpServlet {
 	
 	Administrador administrador = new Administrador();
 	AdministradorDao administradorDao = new AdministradorDao();
+	
+	Empresa empresa = new Empresa();
+	EmpresaDao empresaDao = new EmpresaDao();
        
     
     public CadastroQuestaoServlet() {
@@ -56,6 +61,9 @@ public class CadastroQuestaoServlet extends HttpServlet {
 			
 		}else if(acao.equalsIgnoreCase("teste")) {
 			
+			 String id = request.getParameter("empresa");
+			 empresa = empresaDao.buscarEmpresa(id);
+			 
 			 List<Questao> questoes = questaoDao.listarQuestoes();
 			 List<QuestaoDto> questoesDto = new ArrayList<QuestaoDto>();
 			 
@@ -90,15 +98,15 @@ public class CadastroQuestaoServlet extends HttpServlet {
 				 
 				 questoesDto.add(qDto);
 			 });
+			 
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("testeFinal.jsp");
 			request.setAttribute("questoes", questoesDto);
+			request.setAttribute("empresa", empresa);
 			dispatcher.forward(request, response);
 			
 			
-		}
-		
-		
+		} 
 	}
 
 	

@@ -32,11 +32,13 @@ public class CadastroEmpresaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String acao = request.getParameter("acao");
-		String user = request.getParameter("user");
-		Usuario usuario = usuarioDao.buscarUsuario(user);
+//		String user = request.getParameter("user");
+//		Usuario usuario = usuarioDao.buscarUsuario(user);
 		
 		if(acao.equalsIgnoreCase("addEmpresa")) {
 			
+			String user = request.getParameter("user");
+			Usuario usuario = usuarioDao.buscarUsuario(user);
 
 			request.getSession().setAttribute("usuarioEmpresa", usuario);
 			request.setAttribute("usuarioEmpresa", usuario);
@@ -45,6 +47,9 @@ public class CadastroEmpresaServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 			
 		}else if (acao.equalsIgnoreCase("editEmpresa")) {
+			
+			String user = request.getParameter("user");
+			Usuario usuario = usuarioDao.buscarUsuario(user);
 			
 			
 			String id = request.getParameter("empresa");
@@ -57,12 +62,24 @@ public class CadastroEmpresaServlet extends HttpServlet {
 			
 		} else if(acao.equalsIgnoreCase("removeEmpresa")) {
 			
+			String user = request.getParameter("user");
+			Usuario usuario = usuarioDao.buscarUsuario(user);
+			
 			String id = request.getParameter("empresa");
 			empresaDao.deletarEmpresa(id);
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
 			request.setAttribute("empresas", empresaDao.listarEmpresa(usuario.getEmail()));
 			request.setAttribute("user", usuario);
+			dispatcher.forward(request, response);
+			
+		} else if (acao.equalsIgnoreCase("doTest")) {
+			
+			String id = request.getParameter("empresa");
+			empresa = empresaDao.buscarEmpresa(id);
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("dicasTeste.jsp");
+			request.setAttribute("empresa", empresa);
 			dispatcher.forward(request, response);
 			
 		}

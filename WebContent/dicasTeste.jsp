@@ -29,7 +29,7 @@
 				faça alterações caso seja necessário.</h6>
 			<br>
 			<a class="btn btn-confirm btn-lg" style="background-color: #1E90FF; color: white; margin-top: 24px;"
-				href="CadastroQuestaoServlet?acao=teste">Vamos lá!</a>
+				href="CadastroQuestaoServlet?acao=teste&empresa=${empresa.id}">Vamos lá!</a>
 
 		</div>
 	</div>

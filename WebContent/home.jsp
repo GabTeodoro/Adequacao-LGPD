@@ -60,18 +60,18 @@ body {
 
 /* Estilo do Footer */
 .footer-title {
-    font-size: 25px;
-    color: white;
-    text-align: center;
+	font-size: 25px;
+	color: white;
+	text-align: center;
 }
 
 .ul-footer {
-  list-style-type: none;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  color: white;
-  background-color: #1E90FF;
+	list-style-type: none;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	color: white;
+	background-color: #1E90FF;
 }
 
 * {
@@ -140,8 +140,8 @@ body {
 						<tr>
 							<td></td>
 							<td><a class="btn btn-outline-dark activated"
-						style="border-radius: 25px; margin-bottom: 25px;"
-						href="CadastroUsuarioServlet?acao=editUser&email=${user.email}">Editar</a></td>
+								style="border-radius: 25px; margin-bottom: 25px;"
+								href="CadastroUsuarioServlet?acao=editUser&email=${user.email}">Editar</a></td>
 						</tr>
 					</table>
 				</form>
@@ -154,9 +154,9 @@ body {
 						</div>
 						<div class="col-sm-4">
 							<a class="btn btn-outline-dark activated"
-						style="border-radius: 25px; margin-bottom: 25px;"
-						href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Cadastrar
-							Nova Empresa</a>
+								style="border-radius: 25px; margin-bottom: 25px;"
+								href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Cadastrar
+								Nova Empresa</a>
 						</div>
 					</div>
 				</div>
@@ -168,6 +168,7 @@ body {
 							<th scope="col">Estado</th>
 							<th scope="col">Nota</th>
 							<th scope="col">Editar</th>
+							<th scope="col">Prova</th>
 							<th scope="col">Excluir</th>
 						</tr>
 					</thead>
@@ -180,12 +181,18 @@ body {
 								<td><c:out value="${empresa.nota}"></c:out></td>
 								<td><a
 									href="CadastroEmpresaServlet?acao=editEmpresa&user=${user.email}&empresa=${empresa.id}"><img
-										alt="Editar" title="Editar Empresa" src="resources/img/edit_icon.png" width="20px"
-										height="20px"></a></td>
+										alt="Editar" title="Editar Empresa"
+										src="resources/img/edit_icon.png" width="30px" height="30px"></a></td>
+								<td><a
+									href="CadastroEmpresaServlet?acao=doTest&empresa=${empresa.id}"><img
+										alt="Realizar Teste" title="Realizar Teste"
+										src="resources/img/test_icon.png" width="40px"
+										height="40px"></a></td>
 								<td><a
 									href="CadastroEmpresaServlet?acao=removeEmpresa&user=${user.email}&empresa=${empresa.id}"><img
-										alt="Excluir" title="Excluir Empresa" src="resources/img/exclude_icon.png" width="20px"
-										height="20px"></a></td>
+										alt="Excluir" title="Excluir Empresa"
+										src="resources/img/exclude_icon.png" width="30px"
+										height="30px"></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -194,56 +201,55 @@ body {
 		</div>
 	</div>
 
-	<footer class="container-fluid bg-footer margin footer ul-footer" style="margin-top: 12px; margin-bottom: 12px;">
-        <p class="footer-title">Desenvolvido por</p>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-1">
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Evanilson Peres</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">evanilson@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Gabriel Teodoro</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">gabriel@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Isabelle Aguiar Silva</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">isabelle@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Ivan Souto</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">ivan@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Matheus Jatobá</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">matheus@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-1">
-                </div>
-            </div>
-        </div>
-    </footer>
+	<footer class="container-fluid bg-footer margin footer ul-footer"
+		style="margin-top: 12px; margin-bottom: 12px;">
+		<p class="footer-title">Desenvolvido por</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-2">
+					<ul class="ul-footer">
+						<li><a>Evanilson Peres</a></li>
+						<li><a href="#">Linkedin</a></li>
+						<li><a href="#">GitHub</a></li>
+						<li><a href="#">evanilson@mail.com</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2">
+					<ul class="ul-footer">
+						<li><a>Gabriel Teodoro</a></li>
+						<li><a href="#">Linkedin</a></li>
+						<li><a href="#">GitHub</a></li>
+						<li><a href="#">gabriel@mail.com</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2">
+					<ul class="ul-footer">
+						<li><a>Isabelle Aguiar Silva</a></li>
+						<li><a href="#">Linkedin</a></li>
+						<li><a href="#">GitHub</a></li>
+						<li><a href="#">isabelle@mail.com</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2">
+					<ul class="ul-footer">
+						<li><a>Ivan Souto</a></li>
+						<li><a href="#">Linkedin</a></li>
+						<li><a href="#">GitHub</a></li>
+						<li><a href="#">ivan@mail.com</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2">
+					<ul class="ul-footer">
+						<li><a>Matheus Jatobá</a></li>
+						<li><a href="#">Linkedin</a></li>
+						<li><a href="#">GitHub</a></li>
+						<li><a href="#">matheus@mail.com</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-1"></div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
