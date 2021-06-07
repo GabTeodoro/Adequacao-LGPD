@@ -8,7 +8,6 @@
 <title>Questões</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="resources/css/cadastroStyle.css">
 <style>
 h1 {
 	color: white;
@@ -58,6 +57,22 @@ body {
 	background-color: #1E90FF;
 }
 
+/* Estilo do Footer */
+.footer-title {
+	font-size: 25px;
+	color: white;
+	text-align: center;
+}
+
+.ul-footer {
+	list-style-type: none;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	color: white;
+	background-color: #1E90FF;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -66,55 +81,41 @@ body {
 <body>
 	<c:import url="menuAdm.jsp" />
 
-	<div class="container" style="margin-top: 80px">
-		<img alt="Logo" src="resources/img/logo.png" align="right" width="600">
-		<br> <br> <br> <br>
-		<h1 align="center">Olá ${primeiroNome},</h1>
-		<h1 align="center">A MELHOR FERRAMENTA DE LGPD!</h1>
-	</div>
-
-
 	<!-- Tabela de Questões de Múltipla Escolha -->
 	
 	<div class="container-fluid text-center"
-		style="margin-top: 200px; padding-top: 60px; padding-bottom: 150px; background-color: white; place-content: center;">
-		<br>
+		style="margin-top: 25px; padding-top: 60px; padding-bottom: 150px; background-color: white; place-content: center;">
 		<div class="row d-flex justify-content-center">
 			<div class="col-sm-10">
 				<h2 style="color:black">Questões de Múltipla Escolha</h2>
-				<button class="btn btn-outline-dark activated align-content-lg-end" style="border-radius: 25px; margin-bottom: 25px;"
-				href="">Cadastrar Nova Questão</button>
+				<a class="btn btn-outline-dark activated align-content-lg-end" style="border-radius: 25px; margin-bottom: 25px;"
+				href="CadastroQuestaoServlet?acao=AddQuestion&user=${user.email}">Cadastrar Nova Questão</a>
 				<table class="table table-hover table-bordered">
 					<thead class="thead-dark">
 						<tr>
 							<th scope="col">Questão</th>
 							<th scope="col">Resposta</th>
-							<th scope="col">Resposta Falsa 1</th>
-							<th scope="col">Resposta Falsa 2</th>
-							<th scope="col">Resposta Falsa 3</th>
 							<th scope="col">Editar</th>
 							<th scope="col">Excluir</th>
 						</tr>
 					</thead>
 					<tbody>
+					<c:forEach items="${questoes}" var="questao">
 						<!-- Cadastrar valores faltantes-->
 						
 							<tr>
-								<td><c:out value=""></c:out></td>
-								<td><c:out value=""></c:out></td>
-								<td><c:out value=""></c:out></td>
-								<td><c:out value=""></c:out></td>
-								<td><c:out value=""></c:out></td>
+								<td><c:out value="${questao.pergunta}"></c:out></td>
+								<td><c:out value="${questao.respostaCorreta}"></c:out></td>
 								<td><a
 									href=""><img
 										alt="Editar" title="Editar Questão" src="resources/img/edit_icon.png" width="20px"
 										height="20px"></a></td>
 								<td><a
-									href=""><img
+									href="CadastroQuestaoServlet?acao=removeQuestion&questao=${questao.id}"><img
 										alt="Excluir" title="Excluir Questão" src="resources/img/exclude_icon.png" width="20px"
 										height="20px"></a></td>
 							</tr>
-						
+						</c:forEach>
 					</tbody>
 				</table>
 			</div>
@@ -129,8 +130,8 @@ body {
 		<div class="row d-flex justify-content-center">
 			<div class="col-sm-10">
 							<h2 style="color: black;">Questões Verdadeiro ou Falso</h2>
-							<button class="btn btn-outline-dark activated align-content-lg-end" style="border-radius: 25px; margin-bottom: 25px;"
-							href="">Cadastrar Nova Questão</button>
+							<a class="btn btn-outline-dark activated align-content-lg-end" style="border-radius: 25px; margin-bottom: 25px;"
+							href="">Cadastrar Nova Questão</a>
 				<table class="table table-hover table-bordered">
 					<thead class="thead-dark">
 						<tr>
@@ -161,6 +162,5 @@ body {
 			</div>
 		</div>
 	</div>
-	<c:import url="footer.jsp"/>
 </body>
 </html>

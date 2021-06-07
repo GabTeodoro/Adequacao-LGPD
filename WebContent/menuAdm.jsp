@@ -49,6 +49,9 @@ body {
 			<li class="nav-item"><a class="btn btn-outline-light active"
 				style="border-radius: 25px" href="CadastroQuestaoServlet?acao=AddQuestion&user=${user.email}">Questões</a></li>
 			<li></li>
+			<li class="nav-item"><a class="btn btn-outline-light active"
+				style="border-radius: 25px" href="CadastroQuestaoServlet?acao=listar">Lista</a></li>
+			<li></li>
 			<li class="nav-item"><a class="btn btn-outline-dark"
 				style="border-radius: 25px" href="LoginUsuarioServlet?acao=logoff">Sair!</a></li>
 			<li></li>
