@@ -86,8 +86,7 @@ public class LoginUsuarioServlet extends HttpServlet {
 				
 				
 			}else {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("loginUsuario.jsp");
-				request.setAttribute("msg", "E-mail ou senha inválido!");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("loginUsuario.jsp?falha=true");
 				dispatcher.forward(request, response);
 				
 			}

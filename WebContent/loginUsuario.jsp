@@ -39,6 +39,7 @@
 			</form>
 		</div>
 	</div>
+	<% if(request.getParameter("falha") != null)out.print("<script>alert('Usuario e/ou senha invalido!')</script>"); %>
 	<script type="text/javascript">
 		function validarCampos() {
 
