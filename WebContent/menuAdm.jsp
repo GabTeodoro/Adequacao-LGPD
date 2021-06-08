@@ -36,7 +36,7 @@ body {
 <body>
 	<nav class="navbar navbar-expand-sm navbar-transparent">
 		<div class="container">
-			<a class="navbar-brand" href="CadastroAdministradorServlet?acao=listar&user=${user.email}"><img
+			<a class="navbar-brand" href="CadastroAdministradorServlet?acao=listar&user=${logadoAdm.email}"><img
 					src="resources/img/logo_icon4.png" width="70"></a>
 		</div>
 		<ul class="navbar-nav">
