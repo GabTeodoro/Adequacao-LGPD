@@ -122,12 +122,23 @@ public class CadastroQuestaoServlet extends HttpServlet {
 			request.setAttribute("questoes", questaoDao.listarQuestoes());
 			dispatcher.forward(request, response);
 			
+		} else if (acao.equalsIgnoreCase("editQuestion")) {
+			
+			String id = request.getParameter("questao");
+			
+			questao = questaoDao.buscarQuestao(id);
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroQuestao.jsp");
+			request.setAttribute("questao", questao);
+			dispatcher.forward(request, response);
+			
 		}
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String id = request.getParameter("id");
 		String emailAdm = request.getParameter("emailAdm");
 		String pergunta = request.getParameter("pergunta");
 		String respostaCorreta = request.getParameter("respostaCorreta");
@@ -141,19 +152,34 @@ public class CadastroQuestaoServlet extends HttpServlet {
 		questao.setRespostaErrada2(respostaErrada2);
 		questao.setRespostaErrada3(respostaErrada3);
 		
+		if (id == null || id.isEmpty()) {
+			
+			Administrador adm = administradorDao.buscarAdministrador(emailAdm);
+			questaoDao.cadastrarQuestao(questao);
+
+			String[] nomeCompleto = adm.getNome().split(" ");
+			String primeiroNome = nomeCompleto[0];
+
+			RequestDispatcher dispatcher = request.getRequestDispatcher("homeAdm.jsp");
+			HttpSession session = request.getSession();
+			session.setAttribute("logado", adm);
+			request.setAttribute("user", adm);
+			request.setAttribute("primeiroNome", primeiroNome);
+			dispatcher.forward(request, response);
+			
+		}else if (id != null || !id.isEmpty()) {
+			
+			questao.setId(Long.parseLong(id));
+			questaoDao.editarQuestao(questao);
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("tabelasQuestoes.jsp");
+			request.setAttribute("questoes", questaoDao.listarQuestoes());
+			dispatcher.forward(request, response);
+			
+		}
 		
-		Administrador adm = administradorDao.buscarAdministrador(emailAdm);
-		questaoDao.cadastrarQuestao(questao);
-
-		String[] nomeCompleto = adm.getNome().split(" ");
-		String primeiroNome = nomeCompleto[0];
-
-		RequestDispatcher dispatcher = request.getRequestDispatcher("homeAdm.jsp");
-		HttpSession session = request.getSession();
-		session.setAttribute("logado", adm);
-		request.setAttribute("user", adm);
-		request.setAttribute("primeiroNome", primeiroNome);
-		dispatcher.forward(request, response);
+		
+		
 	}
 
 }

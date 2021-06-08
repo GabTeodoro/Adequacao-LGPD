@@ -107,7 +107,7 @@ body {
 								<td><c:out value="${questao.pergunta}"></c:out></td>
 								<td><c:out value="${questao.respostaCorreta}"></c:out></td>
 								<td><a
-									href=""><img
+									href="CadastroQuestaoServlet?acao=editQuestion&questao=${questao.id}"><img
 										alt="Editar" title="Editar Questão" src="resources/img/edit_icon.png" width="20px"
 										height="20px"></a></td>
 								<td><a

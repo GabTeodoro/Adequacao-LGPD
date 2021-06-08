@@ -33,27 +33,27 @@
 					<tr>
 						<td><label>Pergunta: </label></td>
 						<td><textarea rows="4" cols="40" maxlength="500"
-								id="pergunta" name="pergunta"></textarea></td>
+								id="pergunta" name="pergunta">${questao.pergunta}</textarea></td>
 					</tr>
 					<tr>
 						<td><label>Resposta Correta: </label></td>
 						<td><textarea rows="4" cols="40" maxlength="500"
-								id="respostaCorreta" name="respostaCorreta"></textarea></td>
+								id="respostaCorreta" name="respostaCorreta">${questao.respostaCorreta}</textarea></td>
 					</tr>
 					<tr>
 						<td><label>Resposta Errada 1: </label></td>
 						<td><textarea rows="4" cols="40" maxlength="500"
-								id="respostaErrada1" name="respostaErrada1"></textarea></td>
+								id="respostaErrada1" name="respostaErrada1">${questao.respostaErrada[0]}</textarea></td>
 					</tr>
 					<tr>
 						<td><label>Resposta Errada 2: </label></td>
 						<td><textarea rows="4" cols="40" maxlength="500"
-								id="respostaErrada2" name="respostaErrada2"></textarea></td>
+								id="respostaErrada2" name="respostaErrada2">${questao.respostaErrada[1]}</textarea></td>
 					</tr>
 					<tr>
 						<td><label>Resposta Errada 3: </label></td>
 						<td><textarea rows="4" cols="40" maxlength="500"
-								id="respostaErrada3" name="respostaErrada3"></textarea></td>
+								id="respostaErrada3" name="respostaErrada3">${questao.respostaErrada[0]}</textarea></td>
 					</tr>
 					<tr>
 						<td></td>
