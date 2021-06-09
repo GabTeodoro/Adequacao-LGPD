@@ -49,10 +49,6 @@ body {
 						src="resources/img/logo_icon4.png" width="70"></a>
 
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item"><a
-							class="btn btn-outline-light active  "
-							style="border-radius: 25px" href="dicasTeste.jsp">Teste</a></li>
-						<li class="nav-item"></li>
 						<li class="nav-item"><a class="btn btn-outline-light active"
 							style="border-radius: 25px"
 							href="CadastroEmpresaServlet?acao=addEmpresa&user=${user.email}">Empresa</a></li>
@@ -81,7 +77,7 @@ body {
 			</c:if>
 		</div>
 	</nav>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script

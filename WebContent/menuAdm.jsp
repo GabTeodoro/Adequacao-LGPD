@@ -34,29 +34,42 @@ body {
 }
 </style>
 <body>
-	<nav class="navbar navbar-expand-sm navbar-transparent">
-		<div class="container">
-			<a class="navbar-brand" href="CadastroAdministradorServlet?acao=listar&user=${logadoAdm.email}"><img
+	<nav class="navbar d-block navbar-expand-lg navbar-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="container-fluid">
+				<a class="navbar-brand"
+					href="CadastroAdministradorServlet?acao=listar&user=${logadoAdm.email}"><img
 					src="resources/img/logo_icon4.png" width="70"></a>
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="btn btn-outline-light active "
+						style="border-radius: 25px"
+						href="CadastroAdministradorServlet?acao=addAdm&user=${user.email}">Cadastro</a></li>
+					<li class="nav-item"></li>
+					<li class="nav-item"><a class="btn btn-outline-light active"
+						style="border-radius: 25px"
+						href="CadastroAdministradorServlet?acao=listAdm&user=${user.email}">Admins</a></li>
+					<li class="nav-item"></li>
+					<li class="nav-item"><a class="btn btn-outline-light active"
+						style="border-radius: 25px"
+						href="CadastroQuestaoServlet?acao=listar">Questões</a></li>
+					<li class="nav-item"></li>
+					<li class="nav-item"><a class="btn btn-outline-dark"
+						style="border-radius: 25px" href="LoginUsuarioServlet?acao=logoff">Sair!</a></li>
+					<li class="nav-item"></li>
+				</ul>
+			</div>
 		</div>
-		<ul class="navbar-nav">
-			<li class="nav-item"><a class="btn btn-outline-light active "
-				style="border-radius: 25px" href="CadastroAdministradorServlet?acao=addAdm&user=${user.email}">Cadastro</a></li>
-			<li></li>
-			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px" href="CadastroAdministradorServlet?acao=listAdm&user=${user.email}">Admins</a></li>
-			<li></li>
-			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px" href="CadastroQuestaoServlet?acao=AddQuestion&user=${user.email}">Questões</a></li>
-			<li></li>
-			<li class="nav-item"><a class="btn btn-outline-light active"
-				style="border-radius: 25px" href="CadastroQuestaoServlet?acao=listar">Lista</a></li>
-			<li></li>
-			<li class="nav-item"><a class="btn btn-outline-dark"
-				style="border-radius: 25px" href="LoginUsuarioServlet?acao=logoff">Sair!</a></li>
-			<li></li>
-		</ul>
 	</nav>
-
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>

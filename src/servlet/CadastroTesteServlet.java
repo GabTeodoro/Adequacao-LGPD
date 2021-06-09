@@ -36,8 +36,9 @@ public class CadastroTesteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String id = request.getParameter("empresa");
-		
+		String pergunta = request.getParameter("pergunta");
 		String resposta = request.getParameter("resposta");
+		String respostaCorreta = request.getParameter("respostaCorreta");
 		
 		System.out.println(resposta);
 		
