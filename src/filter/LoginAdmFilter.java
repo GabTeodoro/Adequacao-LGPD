@@ -14,7 +14,8 @@ import javax.servlet.http.HttpSession;
 
 import model.Administrador;
 
-@WebFilter(filterName = "AuthAdmFilter", urlPatterns = { "/cadastroQuestao.jsp", "/cadastroAdministrador.jsp" })
+@WebFilter(filterName = "AuthAdmFilter", urlPatterns = { "/cadastroQuestao.jsp", "/cadastroAdministrador.jsp",
+		"/tabelasQuestoes.jsp", "/homeAdm.jsp", "/menuAdm.jsp", "/listaAdm.jsp" })
 public class LoginAdmFilter implements Filter {
 
 	public LoginAdmFilter() {
