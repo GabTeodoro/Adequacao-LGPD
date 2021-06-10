@@ -75,42 +75,46 @@ body {
 			cadastro.</a>
 	</div>
 
-	<div class="container-fluid"
-		style="margin-top: 200px; background-color: white;">
-		<br>
-		<h3>O que é a LGPD?</h3>
-		<h4>LGPD é a lei geral de proteção de dados, lei número
-			13.709/2018 aprovada em agosto de 2018 que regula as atividades e
-			tratamentos de dados pessoais que também altera os artigos 7 0 e 1 6
-			0 do Marco Civil da internet com a finalidade de impor regras o
-			tratamento de dados pessoais tendo como finalidade proteger o direito
-			a liberdade e a privacidade de livre desenvolvimento dos cidadãos. A
-			lei não cita apenas as informações mantidas no sistema on-line mais
-			sua criação se deve pela complexidade que a gestão de dados ganhou na
-			economia digital. Entre os dados pessoais que segundo a LGPD são
-			quaisquer informações relacionadas a pessoa natural identificada ou
-			identificável, suas leis valem para pessoas físicas e jurídicas (
-			públicas ou privadas ) servindo principalmente para empresas e órgãos
-			públicos serem mais transparentes e responsáveis com o uso dos dados
-			alheios, com o risco de multa para as empresas que pode chegar a 50
-			milhões por infração. As empresas possuem dados pessoais dos usuários
-			em diversas áreas e sistemas e muitas vezes os dados dos usuários
-			estão presentes em várias áreas como por exemplo na área financeira,
-			vendas, marketing, suporte entre outras. As empresas possuindo tantos
-			dados de seus usuários devem adotar medidas adequadas aos princípios
-			previstos na LGPD tendo em vista que os titulares dos dados têm o
-			direito de ter o controle de seus dados.</h4>
-
-
-		<div style="margin-top: 50px; background-color: white;">
-			<h3>Sobre o nosso teste!</h3>
-			<h4>Nossos testes são questões de alternativas sobre a LGPD (Lei
-				Geral de Proteção de Dados) que deveram ser preenchidos de acordo
-				com o funcionamento de sua empresa. Serão 10 questões que ao final
-				será mostrado sua pontuação de acertos e determinando se a companhia
-				que trabalha está de acordo com a LGPD. Caso não atinja a pontuação
-				necessária, haverá uma identificação do que é necessário para se
-				adequar as normas.</h4>
+	<div class="container-fluid" style="padding-top: 50px; margin-top: 17%; background-color: white;">
+		<div class="row">
+			<div class="col-lg-12 text-center" style="padding-inline: 5%;">
+				<p class="h3" style="font-family: 'Gill Sans', sans-serif">O que ï¿½ a LGPD?</p>
+					<p class="h4" style="font-family: 'Gill Sans', sans-serif">LGPD ï¿½ a lei geral de proteï¿½ï¿½o de dados, lei nï¿½mero
+					13.709/2018 aprovada em agosto de 2018 que regula as atividades e
+					tratamentos de dados pessoais que tambï¿½m altera os artigos 7 0 e 1 6
+					0 do Marco Civil da internet com a finalidade de impor regras o
+					tratamento de dados pessoais tendo como finalidade proteger o direito
+					a liberdade e a privacidade de livre desenvolvimento dos cidadï¿½os. A
+					lei nï¿½o cita apenas as informaï¿½ï¿½es mantidas no sistema on-line mais
+					sua criaï¿½ï¿½o se deve pela complexidade que a gestï¿½o de dados ganhou na
+					economia digital. Entre os dados pessoais que segundo a LGPD sï¿½o
+					quaisquer informaï¿½ï¿½es relacionadas a pessoa natural identificada ou
+					identificï¿½vel, suas leis valem para pessoas fï¿½sicas e jurï¿½dicas (
+					pï¿½blicas ou privadas ) servindo principalmente para empresas e ï¿½rgï¿½os
+					pï¿½blicos serem mais transparentes e responsï¿½veis com o uso dos dados
+					alheios, com o risco de multa para as empresas que pode chegar a 50
+					milhï¿½es por infraï¿½ï¿½o. As empresas possuem dados pessoais dos usuï¿½rios
+					em diversas ï¿½reas e sistemas e muitas vezes os dados dos usuï¿½rios
+					estï¿½o presentes em vï¿½rias ï¿½reas como por exemplo na ï¿½rea financeira,
+					vendas, marketing, suporte entre outras. As empresas possuindo tantos
+					dados de seus usuï¿½rios devem adotar medidas adequadas aos princï¿½pios
+					previstos na LGPD tendo em vista que os titulares dos dados tï¿½m o
+					direito de ter o controle de seus dados.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 text-center" style="padding-inline: 5%; margin-top: 5%;">
+				<p class="h3" style="font-family: 'Gill Sans', sans-serif">Sobre o nosso teste!</p>
+				<p class="h4" style="font-family: 'Gill Sans', sans-serif">Nossos testes sï¿½o questï¿½es de alternativas sobre a LGPD (Lei
+					Geral de Proteï¿½ï¿½o de Dados) que deveram ser preenchidos de acordo
+					com o funcionamento de sua empresa. Serï¿½o 10 questï¿½es que ao final
+					serï¿½ mostrado sua pontuaï¿½ï¿½o de acertos e determinando se a companhia
+					que trabalha estï¿½ de acordo com a LGPD. Caso nï¿½o atinja a pontuaï¿½ï¿½o
+					necessï¿½ria, haverï¿½ uma identificaï¿½ï¿½o do que ï¿½ necessï¿½rio para se
+					adequar as normas.
+				</p>
+			</div>
 		</div>
 	</div>
 </body>
