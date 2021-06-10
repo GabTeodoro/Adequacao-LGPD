@@ -131,7 +131,7 @@ body {
 			<div class="col-sm-10">
 							<h2 style="color: black;">Questões Verdadeiro ou Falso</h2>
 							<a class="btn btn-outline-dark activated align-content-lg-end" style="border-radius: 25px; margin-bottom: 25px;"
-							href="">Cadastrar Nova Questão</a>
+							href="CadastroQuestaoServlet?acao=AddQuestionTrueOrFalse&user=${user.email}">Cadastrar Nova Questão</a>
 				<table class="table table-hover table-bordered">
 					<thead class="thead-dark">
 						<tr>
