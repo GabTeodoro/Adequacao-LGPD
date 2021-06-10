@@ -73,14 +73,18 @@ body {
 		<h1 align="center">A MELHOR FERRAMENTA DE LGPD!</h1>
 	</div>
 	<div class="container-fluid"
-		style="margin-top: 400px; background-color: white;">
-		<br>
-		<h3 style="margin-left: 150px">Meus Dados</h3>
-		<div class="row" style="margin-left: 90px">
-			<div class="col-sm-6">
-				<br>
+		style="padding-top: 50px; margin-top: 400px; background-color: white;">
+		<div class="row" style="display: flex; justify-content: center; align-items: center;">
+			<div class="col-sm-4 d-flex justify-content-center">
 				<form>
 					<table>
+						<thead>
+							<tr>
+								<th colspan="2" class="text-center">
+									<h3>Meus Dados</h3>
+								</th>
+							</tr>
+						</thead>
 						<tr>
 							<td><label>Id: </label></td>
 							<td><input readonly="readonly" type="text" id="id" name="id"
@@ -114,6 +118,9 @@ body {
 						</tr>
 					</table>
 				</form>
+			</div>
+			<div class="col-sm-4 text-center">
+				<a href="tabelasQuestoes.jsp"><button type="button" class="btn btn-primary btn-lg" style="background-color: #1E90FF;">Editar Questões</button></a>
 			</div>
 		</div>
 	</div>
