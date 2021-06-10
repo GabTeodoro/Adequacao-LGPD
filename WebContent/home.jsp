@@ -98,8 +98,8 @@ body {
 				<form>
 					<table>
 						<tr>
-							<td><label>Id: </label></td>
-							<td><input readonly="readonly" type="text" id="id" name="id"
+							<td><label></label></td>
+							<td><input readonly="readonly" type="hidden" id="id" name="id"
 								placeholder="Id" value="${user.id}"></td>
 						</tr>
 						<tr>
