@@ -60,6 +60,13 @@
 							placeholder="Cargo atual" value="${user.cargo}"></td>
 					</tr>
 					<tr>
+						<td><input type="checkbox" name="termos" id="termos"
+							required="required"></td>
+						<td><a class="link active" href="" onclick="return termos()"
+							style="color: black;" id="termos"> "Concordo com os termos de
+								uso."</a></td>
+					</tr>
+					<tr>
 						<td></td>
 						<td><input type="submit" value="Confirmar"
 							style="width: 100%"></td>
@@ -96,6 +103,11 @@
 			}
 
 			return true;
+		}
+
+		function termos() {
+			alert('Lorem ipsum netus sodales cubilia ultrices interdum donec, fringilla purus sed velit conubia habitasse hendrerit placerat, in varius diam ac mi per. mi vulputate metus morbi facilisis ultrices felis platea vivamus ac, aenean eget ante orci sed sollicitudin iaculis. ac diam volutpat mauris aenean nostra cubilia magna ac venenatis, tortor posuere sed faucibus nunc litora dictum tellus ornare, nullam etiam integer non sit commodo morbi massa. maecenas inceptos elementum et habitasse aenean fusce class, nibh est lorem potenti hac sociosqu taciti cubilia, habitant primis consequat ad velit est. gravida dui varius ad tincidunt vestibulum felis neque, ultricies potenti ad risus ligula porttitor quam, ultrices placerat torquent quam hac nibh. .');
+		return false;
 		}
 	</script>
 </body>
