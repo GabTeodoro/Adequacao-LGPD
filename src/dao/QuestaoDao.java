@@ -112,6 +112,41 @@ public class QuestaoDao {
 
 		return questoes;
 	}
+	
+	public List<Questao> listarTodasQuestoes() {
+
+		List<Questao> questoes = new ArrayList<Questao>();
+
+		try {
+
+			String sql = "SELECT * FROM questao";
+			PreparedStatement listar = connection.prepareStatement(sql);
+			ResultSet resultado = listar.executeQuery();
+
+			while (resultado.next()) {
+
+				Questao questao = new Questao();
+				questao.setId(resultado.getLong("id"));
+				questao.setPergunta(resultado.getString("pergunta"));
+				questao.setRespostaCorreta(resultado.getString("respostaCorreta"));
+				questao.setRespostaErrada1(resultado.getString("respostaErrada1"));
+				questao.setRespostaErrada2(resultado.getString("respostaErrada2"));
+				questao.setRespostaErrada3(resultado.getString("respostaErrada3"));
+				questoes.add(questao);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			try {
+				connection.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}
+
+		return questoes;
+	}
 
 	public void deletarQuestao(String id) {
 

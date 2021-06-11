@@ -120,7 +120,7 @@ public class CadastroQuestaoServlet extends HttpServlet {
 		} else if (acao.equalsIgnoreCase("listar")) {
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("tabelasQuestoes.jsp");
-			request.setAttribute("questoes", questaoDao.listarQuestoes());
+			request.setAttribute("questoes", questaoDao.listarTodasQuestoes());
 			dispatcher.forward(request, response);
 			
 		} else if (acao.equalsIgnoreCase("removeQuestion")) {
