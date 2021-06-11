@@ -94,41 +94,42 @@ text-align: center;
 	<div class="container-fluid" style="padding-top: 50px; margin-top: 17%; background-color: white;">
 		<div class="row">
 			<div class="col-lg-12 text-center" style="padding-inline: 5%;">
-				<p class="h3" style="font-family: 'Gill Sans', sans-serif">O que � a LGPD?</p>
-					<p class="h4" style="font-family: 'Gill Sans', sans-serif">LGPD � a lei geral de prote��o de dados, lei n�mero
-					13.709/2018 aprovada em agosto de 2018 que regula as atividades e
-					tratamentos de dados pessoais que tamb�m altera os artigos 7 0 e 1 6
-					0 do Marco Civil da internet com a finalidade de impor regras o
-					tratamento de dados pessoais tendo como finalidade proteger o direito
-					a liberdade e a privacidade de livre desenvolvimento dos cidad�os. A
-					lei n�o cita apenas as informa��es mantidas no sistema on-line mais
-					sua cria��o se deve pela complexidade que a gest�o de dados ganhou na
-					economia digital. Entre os dados pessoais que segundo a LGPD s�o
-					quaisquer informa��es relacionadas a pessoa natural identificada ou
-					identific�vel, suas leis valem para pessoas f�sicas e jur�dicas (
-					p�blicas ou privadas ) servindo principalmente para empresas e �rg�os
-					p�blicos serem mais transparentes e respons�veis com o uso dos dados
-					alheios, com o risco de multa para as empresas que pode chegar a 50
-					milh�es por infra��o. As empresas possuem dados pessoais dos usu�rios
-					em diversas �reas e sistemas e muitas vezes os dados dos usu�rios
-					est�o presentes em v�rias �reas como por exemplo na �rea financeira,
+				<p class="h3" style="font-family: 'Gill Sans', sans-serif; margin-bottom: 20px;">O que é a LGPD?</p>
+				<p class="h4" style="font-family: 'Gill Sans', sans-serif">LGPD é a Lei Geral de Proteção de Dados, número
+					13.709/2018, aprovada em agosto de 2018, regula as atividades e
+					tratamentos de dados pessoais. Não somente, a lei também altera os artigos 70 e 160 
+					do Marco Civil da internet com a finalidade de impor regras no
+					tratamento de dados pessoais e proteger o direito
+					a liberdade e privacidade de livre desenvolvimento dos cidadãos. A
+					lei não cita apenas as informações mantidas no sistema on-line mas também
+					sua criação se deve pela complexidade que a gestão de dados ganhou na
+					economia digital. Entre os dados pessoais, que segundo a LGPD são
+					quaisquer informações relacionadas a pessoa natural identificada ou
+					identificável, suas leis valem para pessoas físicas e jurídicas 
+					(públicas ou privadas) servindo principalmente para empresas e órgãos
+					públicos serem mais transparentes e responsáveis com o uso dos dados
+					alheios, correndo o risco de tomarem multa com valores que podem chegar aos 50
+					milhões por infração. As empresas possuem dados pessoais dos usuários
+					em diversas áreas e sistemas, dados esses que muitas vezes 
+					estão presentes em várias áreas, como por exemplo na área financeira,
 					vendas, marketing, suporte entre outras. As empresas possuindo tantos
-					dados de seus usu�rios devem adotar medidas adequadas aos princ�pios
-					previstos na LGPD tendo em vista que os titulares dos dados t�m o
+					dados de seus usuários devem adotar medidas adequadas aos princípios
+					previstos na LGPD, tendo em vista que os titulares dos dados têm o
 					direito de ter o controle de seus dados.
 				</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-12 text-center" style="padding-inline: 5%; margin-top: 5%; padding-bottom: 50px;">
-				<p class="h3" style="font-family: 'Gill Sans', sans-serif">Sobre o nosso teste!</p>
-				<p class="h4" style="font-family: 'Gill Sans', sans-serif">Nossos testes s�o quest�es de alternativas sobre a LGPD (Lei
-					Geral de Prote��o de Dados) que deveram ser preenchidos de acordo
-					com o funcionamento de sua empresa. Ser�o 10 quest�es que ao final
-					ser� mostrado sua pontua��o de acertos e determinando se a companhia
-					que trabalha est� de acordo com a LGPD. Caso n�o atinja a pontua��o
-					necess�ria, haver� uma identifica��o do que � necess�rio para se
-					adequar as normas.
+				<p class="h3" style="font-family: 'Gill Sans', sans-serif; margin-bottom: 20px;">Sobre o nosso teste!</p>
+				<p class="h4" style="font-family: 'Gill Sans', sans-serif">Nossos testes contêm questões de alternativa, assim como 
+					questões de verdadeiro ou falso, sobre a LGPD (Lei
+					Geral de Proteção de Dados). As respostas devem ser preenchidas de 
+					acordo com o funcionamento e regras da sua empresa. Você responderá
+					10 questões e ao final do teste terá acesso à sua porcentagem de acertos, 
+					determinando se a companhia que trabalha está de acordo com a LGPD.
+					Caso não atinja a pontuação necessária, haverá uma identificação do que 
+					é necessário para se adequar as normas.
 				</p>
 			</div>
 		</div>
