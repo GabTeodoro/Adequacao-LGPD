@@ -77,57 +77,6 @@
 			</form>
 		</div>
 	</div>
-	<footer class="container-fluid bg-footer margin footer ul-footer" style="margin-top: 12px; margin-bottom: 12px;">
-        <p class="footer-title">Desenvolvido por</p>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-1">
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Evanilson Peres</a></li>
-                        <li><a href="#" id="link-footer">Linkedin</a></li>
-                        <li><a href="#" id="link-footer">GitHub</a></li>
-                        <li><a href="#" id="link-footer">evanilson@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Gabriel Teodoro</a></li>
-                        <li><a href="#" id="link-footer">Linkedin</a></li>
-                        <li><a href="#" id="link-footer">GitHub</a></li>
-                        <li><a href="#" id="link-footer">gabriel@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Isabelle Aguiar Silva</a></li>
-                        <li><a href="#" id="link-footer">Linkedin</a></li>
-                        <li><a href="#" id="link-footer">GitHub</a></li>
-                        <li><a href="#" id="link-footer">isabelle@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Ivan Souto</a></li>
-                        <li><a href="#" id="link-footer">Linkedin</a></li>
-                        <li><a href="#" id="link-footer">GitHub</a></li>
-                        <li><a href="#" id="link-footer">ivan@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <ul class="ul-footer">
-                        <li><a>Matheus Jatobá</a></li>
-                        <li><a href="#" id="link-footer">Linkedin</a></li>
-                        <li><a href="#" id="link-footer">GitHub</a></li>
-                        <li><a href="#" id="link-footer">matheus@mail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-1">
-                </div>
-            </div>
-        </div>
-	</footer>
 	<script type="text/javascript">
 		function validarCampos() {
 

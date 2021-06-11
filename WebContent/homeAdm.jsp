@@ -133,10 +133,12 @@ body {
 				</form>
 			</div>
 			<div class="col-sm-2 text-center">
-				<a href="tabelaQuestoesMultipla.jsp"><button type="button" class="btn btn-primary btn-lg" style="background-color: #1E90FF; width: 90%;">Editar Questões<br>de Múltipla Escolha</button></a>
+			<a class="btn btn-primary btn-lg" style="background-color: #1E90FF; width: 90%;"
+				href="CadastroQuestaoServlet?acao=AddQuestion&user=${user.email}">Cadastrar Nova Questão</a>
 			</div>
 			<div class="col-sm-2 text-center">
-				<a href="tabelaQuestoesVF.jsp"><button type="button" class="btn btn-primary btn-lg" style="background-color: #1E90FF;">Editar Questões<br>de Verdadeiro ou Falso</button></a>
+			<a class="btn btn-primary btn-lg" style="background-color: #1E90FF;"
+							href="CadastroQuestaoServlet?acao=AddQuestionTrueOrFalse&user=${user.email}">Cadastrar Nova Questão de Verdadeiro ou Falso</a>
 			</div>
 		</div>
 	</div>
