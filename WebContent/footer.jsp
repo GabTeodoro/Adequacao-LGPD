@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="resources/css/footer.css">
 </head>
 <style>
     /* Estilo do Footer */
@@ -35,47 +35,47 @@
                 <div class="col-lg-2">
                     <ul class="ul-footer">
                         <li><a>Evanilson Peres</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">evanilson@mail.com</a></li>
+                        <li><a href="#" id="link-footer">Linkedin</a></li>
+                        <li><a href="#" id="link-footer">GitHub</a></li>
+                        <li><a href="#" id="link-footer">evanilson@mail.com</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2">
                     <ul class="ul-footer">
                         <li><a>Gabriel Teodoro</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">gabriel@mail.com</a></li>
+                        <li><a href="#" id="link-footer">Linkedin</a></li>
+                        <li><a href="#" id="link-footer">GitHub</a></li>
+                        <li><a href="#" id="link-footer">gabriel@mail.com</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2">
                     <ul class="ul-footer">
                         <li><a>Isabelle Aguiar Silva</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">isabelle@mail.com</a></li>
+                        <li><a href="#" id="link-footer">Linkedin</a></li>
+                        <li><a href="#" id="link-footer">GitHub</a></li>
+                        <li><a href="#" id="link-footer">isabelle@mail.com</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2">
                     <ul class="ul-footer">
                         <li><a>Ivan Souto</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">ivan@mail.com</a></li>
+                        <li><a href="#" id="link-footer">Linkedin</a></li>
+                        <li><a href="#" id="link-footer">GitHub</a></li>
+                        <li><a href="#" id="link-footer">ivan@mail.com</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2">
                     <ul class="ul-footer">
                         <li><a>Matheus Jatobá</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">matheus@mail.com</a></li>
+                        <li><a href="#" id="link-footer">Linkedin</a></li>
+                        <li><a href="#" id="link-footer">GitHub</a></li>
+                        <li><a href="#" id="link-footer">matheus@mail.com</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-1">
                 </div>
             </div>
         </div>
-    </footer>
+	</footer>
 </body>
 </html>

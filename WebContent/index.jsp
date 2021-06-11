@@ -53,6 +53,22 @@ body {
 	background-color: #1E90FF;
 }
 
+/* Estilo do Footer */
+.footer-title {
+font-size: 25px;
+color: white;
+text-align: center;
+}
+
+.ul-footer {
+  list-style-type: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #1E90FF;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -104,7 +120,7 @@ body {
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-12 text-center" style="padding-inline: 5%; margin-top: 5%;">
+			<div class="col-lg-12 text-center" style="padding-inline: 5%; margin-top: 5%; padding-bottom: 50px;">
 				<p class="h3" style="font-family: 'Gill Sans', sans-serif">Sobre o nosso teste!</p>
 				<p class="h4" style="font-family: 'Gill Sans', sans-serif">Nossos testes s�o quest�es de alternativas sobre a LGPD (Lei
 					Geral de Prote��o de Dados) que deveram ser preenchidos de acordo
@@ -117,5 +133,56 @@ body {
 			</div>
 		</div>
 	</div>
+	<footer class="container-fluid bg-footer margin footer ul-footer" style="margin-top: 12px; margin-bottom: 12px;">
+        <p class="footer-title">Desenvolvido por</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Evanilson Peres</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">evanilson@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Gabriel Teodoro</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">gabriel@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Isabelle Aguiar Silva</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">isabelle@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Ivan Souto</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">ivan@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul class="ul-footer">
+                        <li><a>Matheus Jatobá</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">matheus@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
